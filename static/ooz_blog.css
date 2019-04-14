@@ -1,0 +1,56 @@
+body {
+    font-family: serif;
+    color: #000000;
+    scroll-behavior: smooth;
+}
+
+.avatar {
+    border-radius: 50%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    max-width: 5rem;
+}
+h1 {
+    font-family: sans;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.8rem;
+}
+h2, h3, h4, h5, h6 {
+    font-family: sans;
+    font-weight: bold;
+}
+
+a         { color: #0366d6; }
+a:link    { color: #0366d6; }
+a:visited { color: #2386f6; }
+a:hover   { color: #2386f6; }
+a:active  { color: #2386f6; }
+
+::selection {
+    background: rgba(255, 234, 0, 0.5);
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 2em;
+}
+ul {
+    list-style: disc;
+    padding-left: 2em;
+}
+ul.task-list,
+ul.task-list li.task-list-item {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.nav-arrow {
+    float: left;
+    margin-right: 1rem;
+}
+.social-icon {
+    float: right;
+    margin-left: 1rem;
+}
