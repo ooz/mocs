@@ -7,7 +7,7 @@ config = {
         'render_root_readme': False,
         'generate_sitemap': True,
         'additional_sitemap_entries': [],
-        'title': 'lego | out of zeit',
+        'title': 'Lego Creations by ooz',
         'logo': 'static/owl.png',
         'style': 'static/ooz_blog.css',
         'external_styles': [],
