@@ -226,7 +226,7 @@ f'''<!DOCTYPE html>
 <div style="text-align:center">
 <a href="{author_url}"><img src="{logo_url}" class="avatar" /></a>
 </div>
-<h1>Lego instructions</h1>
+<h1>Lego Instructions</h1>
 <div style="padding-top:2.5rem;">
 <table><tbody>
 {posts_html}
