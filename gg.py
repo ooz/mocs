@@ -214,7 +214,7 @@ f'''<!DOCTYPE html>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Blog Index | {root_title}</title>
+<title>Index | {root_title}</title>
 <link rel="canonical" href="{base_url}">
 <link rel="shortcut icon" href="{logo_url}">
 
@@ -226,7 +226,7 @@ f'''<!DOCTYPE html>
 <div style="text-align:center">
 <a href="{author_url}"><img src="{logo_url}" class="avatar" /></a>
 </div>
-<h1>Blog</h1>
+<h1>Lego instructions</h1>
 <div style="padding-top:2.5rem;">
 <table><tbody>
 {posts_html}
