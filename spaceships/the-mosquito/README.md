@@ -4,6 +4,8 @@ title: The Mosquito
 description: Light scout and assault fighter
 ---
 
+# The Mosquito
+
 The Mosquito is a light scout and assault fighter, that is much valued by smugglers for its cargo lifting and modding capabilities.
 
 [Instructions (includes part list)](the-mosquito-instructions.pdf)
