@@ -6,7 +6,7 @@ description: Heavy armed and armored assault fighter
 
 # The Wedge (Arrowhead)
 
-The Wedge is heavy armed and armored assault fighter with plenty of pilot comfort for extended space and planetary missions.
+The Wedge (formerly known as the "Arrowhead") is heavy armed and armored assault fighter with plenty of pilot comfort for extended space and planetary missions.
 
 [Instructions (includes part list)](the-wedge-instructions.pdf)
 
