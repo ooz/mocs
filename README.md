@@ -15,4 +15,6 @@ For texts in instructions you may want to install the Microsoft Core Fonts using
 ## Index
 
 * [The Mosquito](spaceships/the-mosquito/)
+* [The Wedge](spaceships/the-wedge/)
+
 * [Modular Rockets](60th-anniversary/modular-rockets/)

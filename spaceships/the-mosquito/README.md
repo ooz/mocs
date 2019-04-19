@@ -34,7 +34,7 @@ The Mosquito is a light scout and assault fighter, that is much valued by smuggl
 I built the first version in summer 2017. It started as a scooter, boat or submarine, inspired by motorcycles with sidecars.
 Since then, I iterated multiple times, improving stability, connection points, pilot space and aesthetics.
 
-* The part base are various Lego Star Wars sets.
+* The part base are various Lego Star Wars sets
 * Time needed to digitalize the model using [BrickLink Studio](https://studio.bricklink.com/v2/build/studio.page): ~80 minutes (first time doing this, now I am more comfortable finding parts 😃)
 * Dimensions: 12x12x5cm with extended wing, ~58g, 74 parts, 58 distinct parts
 
