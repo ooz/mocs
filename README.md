@@ -12,6 +12,8 @@ wine Studio_32.exe -force-d3d9
 
 For texts in instructions you may want to install the Microsoft Core Fonts using `winetricks`.
 
+Make sure to save regularly, since the software sometimes crashes under wine when making instructions.
+
 ## Index
 
 * [The Mosquito](spaceships/the-mosquito/)
