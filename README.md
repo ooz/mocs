@@ -20,3 +20,4 @@ Make sure to save regularly, since the software sometimes crashes under wine whe
 * [The Wedge](spaceships/the-wedge/)
 
 * [Modular Rockets](60th-anniversary/modular-rockets/)
+* [Crafty Miniboat](60th-anniversary/crafty-miniboat/)
