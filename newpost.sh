@@ -3,10 +3,17 @@
 cat >> draft-to-move.md <<EOF
 ---
 date: $(date --utc +%FT%TZ)
-title: New Post
-description: New post by me
-tags: draft
+title: Model
+description:
 ---
 
-## My Post
+# Model
+
+[Instructions (includes part list)](model-instructions.pdf)
+
+## Meta
+
+* Time needed to digitalize: ~??? minutes
+* Dimensions: ???x???x???cm, ???g, ??? parts, ??? distinct parts
+
 EOF
