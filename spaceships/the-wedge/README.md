@@ -26,7 +26,7 @@ The Wedge (formerly known as the "Arrowhead") is heavy armed and armored assault
 * Various outside clips to store minifigure gear
 * Droid docking port or light container connector
 * Can stand upright on its rear engine
-* Rear engine can be replaced with the engines of [The Needle (TODO)]() and the [GI Universal Pod (TODO)](). Also supports the cargo pod of [The Needle (TODO)]() (see photos below)
+* Rear engine can be replaced with the engines of [The Needle (TODO)]() and the [Good Industries Universal Pod](../universal-pod/). Also supports the cargo pod of [The Needle (TODO)]() (see photos below)
 
 ## Meta
 
