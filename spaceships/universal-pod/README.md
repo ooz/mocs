@@ -36,3 +36,12 @@ I always liked the idea of a smallish ball pod with lots of connectors.
 * The part base are various Lego Star Wars sets
 * Time needed to digitalize: ~110 minutes
 * Dimensions: 12x21x7cm, 215g, 244 parts, 119 distinct parts
+
+![Photo of just the pod](real_pod.jpg)
+![UniPod maximal configuration with pilot and opened cockpit](real_pod_open.jpg)
+![Pod with just the engine, looking like a polliwog](real_pod_polliwog_config.jpg)
+![UniPod photo with the Wedge engine](real_pod_wedge_engine.jpg)
+![UniPod photo with the Wedge engine standing upright](real_pod_wedge_engine_upright.jpg)
+![UniPod with the Needle engine](real_pod_needle_engine.jpg)
+![UniPod with the Needle cargo pod and the Wedge engine](real_pod_needle_cargo_pod_wedge_engine.jpg)
+![UniPod with the Needle cargo pod and its own engine, looking like a polliwog](real_pod_polliwog_with_neddle_cargo_pod.jpg)
