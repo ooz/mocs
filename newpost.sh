@@ -11,6 +11,8 @@ description:
 
 [Instructions (includes part list)](model-instructions.pdf)
 
+## Rendered images
+
 ## Meta
 
 * Time needed to digitalize: ~??? minutes
