@@ -4,12 +4,13 @@ My Lego creations with instructions and background information.
 
 ## Index
 
-* [The Mosquito](spaceships/the-mosquito/)
-* [The Wedge](spaceships/the-wedge/)
-* [Good Industries Universal Pod](spaceships/universal-pod/)
 
-* [Modular Rockets](60th-anniversary/modular-rockets/)
-* [Crafty Miniboat](60th-anniversary/crafty-miniboat/)
+[![The Mosquito](thumbnails/mosquito_front.png)](spaceships/the-mosquito/)
+[![The Wedge](thumbnails/the_wedge_front.png)](spaceships/the-wedge/)
+[![Good Industries Universal Pod](thumbnails/universal_pod.png)](spaceships/universal-pod/)
+
+[![Modular Rockets](thumbnails/modular_rockets.png)](60th-anniversary/modular-rockets/)
+[![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)
 
 ## Tools
 
