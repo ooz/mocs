@@ -13,6 +13,8 @@ description:
 
 ## Rendered images
 
+## Features
+
 ## Meta
 
 * Time needed to digitalize: ~??? minutes
