@@ -33,3 +33,12 @@ The design shows some compromises made due to running out of suitable bricks due
 * Time needed to digitalize: ~40 minutes
 * Dimensions (fully assembled with cargo pod): 21x4x5cm, 97g, 91 parts, 52 distinct parts
 
+![The real Needle: compact configuration](real_needle_compact.jpg)
+![Photo of the real Needle: with cargo pod opened](real_needle_open_cargo_pod.jpg)
+![The real Needle: standing upright on the Wedge engine](real_needle_wedge_engine.jpg)
+![The real Needle with the UniPod engine attached](real_needle_unipod_engine.jpg)
+![The real Needle in compact configuration with UniPod utility wing attached](real_needle_unipod_utility_wing.jpg)
+![The real Needle in full UniPod configuration](real_needle_unipod_config.jpg)
+![The real Needle as cockpit pod for the Square Falcon](real_needle_as_square_falcon_cockpit.jpg)
+![The real Needle with Square Falcon wings](real_needle_square_falcon_wings.jpg)
+
