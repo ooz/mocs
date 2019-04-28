@@ -1,0 +1,35 @@
+---
+date: 2019-04-28T19:01:46Z
+title: The Needle
+description: Scrap metal pod
+---
+
+# The Needle
+
+The Needle is what you assemble and fly when you do not have the funding for a [UniPod](../universal-pod/). Less pilot comfort, less armor, less weapons and fewer docking slots. It still gets the job done.
+
+[Instructions (includes part list)](the-needle-instructions.pdf)
+
+## Rendered images
+
+![The Needle: diagonal front view, fully assembled with cockpit, cargo pod and engine](the_needle.png)
+![The Needle: diagonal rear view, fully assembled with cockpit, cargo pod and engine](the_needle_rear.png)
+![The Needle: profile view without cargo pod](the_needle_profile.png)
+
+## Features
+
+* Small cockpit pod with minimal pilot space
+* One cannon, a droid/light container docking port and one slot for minifigure gear
+* The engine provides more minifigure gear storage options. Alternatively the cannon can also be mounted on the engine
+* Cargo pod with turret and further connection points
+* Compatible with the engines of the [Wedge](../the-wedge) and [UniPod](../universal-pod/)
+* The cockpit pod can be attached to the ["Square Falcon"](#TODO)
+
+## Meta
+
+The design shows some compromises made due to running out of suitable bricks due to having built the [Mosquito](../the-mosquito/), [Wedge](../the-wedge/), [UniPod](../universal-pod/) before. It was originally intended to be the cockpit for the ["Square Falcon"](#TODO).
+
+* The part base are various Lego Star Wars sets
+* Time needed to digitalize: ~40 minutes
+* Dimensions (fully assembled with cargo pod): 21x4x5cm, 97g, 91 parts, 52 distinct parts
+
