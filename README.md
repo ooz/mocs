@@ -13,6 +13,7 @@ My Lego creations with instructions and background information.
 
 [![Modular Rockets](thumbnails/modular_rockets.png)](60th-anniversary/modular-rockets/)
 [![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)
+[![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
 
 ## Tools
 
