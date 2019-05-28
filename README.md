@@ -4,7 +4,6 @@ My Lego creations with instructions and background information.
 
 ## Index
 
-
 [![The Mosquito](thumbnails/mosquito_front.png)](spaceships/the-mosquito/)
 [![The Wedge](thumbnails/the_wedge_front.png)](spaceships/the-wedge/)
 [![Good Industries Universal Pod](thumbnails/universal_pod.png)](spaceships/universal-pod/)
@@ -15,6 +14,12 @@ My Lego creations with instructions and background information.
 [![Modular Rockets](thumbnails/modular_rockets.png)](60th-anniversary/modular-rockets/)
 [![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)
 [![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
+
+## Philosophy
+
+* I prefer models that are playable, functional, sturdy and at a scale that can still be moved.
+* I only use legal connections.
+* I prefer minifigure scale.
 
 ## Tools
 
