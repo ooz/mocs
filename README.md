@@ -8,6 +8,7 @@ My Lego creations with instructions and background information.
 [![The Wedge](thumbnails/the_wedge_front.png)](spaceships/the-wedge/)
 [![Good Industries Universal Pod](thumbnails/universal_pod.png)](spaceships/universal-pod/)
 [![The Needle](thumbnails/the_needle.png)](spaceships/the-needle/)
+[![The Square Falcon](thumbnails/the_square_falcon.png)](spaceships/the-square-falcon/)
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](ships/hover-scooter/)
 
@@ -20,6 +21,13 @@ My Lego creations with instructions and background information.
 * I prefer models that are playable, functional, sturdy and at a scale that can still be moved.
 * I only use legal connections.
 * I prefer minifigure scale.
+
+Design approach:
+
+* Focus on moving, functional parts first (e.g. cockpit, hatches, engine)
+* Flesh out raw form
+* Improve sturdiness
+* Iterate
 
 ## Tools
 
