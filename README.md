@@ -9,6 +9,7 @@ My Lego creations with instructions and background information.
 [![Good Industries Universal Pod](thumbnails/universal_pod.png)](spaceships/universal-pod/)
 [![The Needle](thumbnails/the_needle.png)](spaceships/the-needle/)
 [![The Square Falcon](thumbnails/the_square_falcon.png)](spaceships/the-square-falcon/)
+[![Good Industries Saucer](thumbnails/saucer.png)](spaceships/saucer/)
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](ships/hover-scooter/)
 
