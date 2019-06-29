@@ -26,7 +26,7 @@ My Lego creations with instructions and background information.
 
 Design approach:
 
-* Focus on moving, functional parts first (e.g. cockpit, hatches, engine)
+* Focus on core idea or moving, functional parts first (e.g. cockpit, hatches, engine)
 * Flesh out raw form
 * Improve sturdiness
 * Iterate
