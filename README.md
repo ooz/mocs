@@ -18,9 +18,10 @@ My Lego creations with instructions and background information.
 
 ## Philosophy
 
-* I prefer models that are playable, functional, sturdy and at a scale that can still be moved.
+* I prefer models that are playable, functional, sturdy and at a scale that can conveniently be moved.
 * I only use legal connections.
 * I prefer minifigure scale.
+* I treat greeble as an afterthought and do not compromise on the above in favor of more visual appeal.
 
 Design approach:
 
