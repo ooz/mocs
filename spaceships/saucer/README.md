@@ -11,7 +11,7 @@ It features rear and bottom docking points, in case the family needs to come alo
 The spacious cargo bay hides equipment or an abducted cow.
 Light weaponry emphasizes every Saucer pilot's claim to skip traffic.
 
-[Instructions (includes part list)](TODO.pdf)
+[Instructions (includes part list)](saucer-instructions.pdf)
 
 ## Rendered images
 
