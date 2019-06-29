@@ -26,10 +26,10 @@ My Lego creations with instructions and background information.
 
 Design approach:
 
-* Focus on core idea or moving, functional parts first (e.g. cockpit, hatches, engine)
-* Flesh out raw form
-* Improve sturdiness
-* Iterate
+* Focus on core idea or moving, functional parts first (e.g. cockpit, hatches, engine)!
+* Flesh out raw form!
+* Improve sturdiness!
+* Iterate!
 
 ## Tools
 
