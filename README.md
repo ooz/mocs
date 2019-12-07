@@ -11,6 +11,7 @@ My Lego creations with instructions and background information.
 [![The Square Falcon](thumbnails/the_square_falcon.png)](spaceships/the-square-falcon/)
 [![Good Industries Saucer](thumbnails/saucer.png)](spaceships/saucer/)
 [![The Dagger](thumbnails/the_dagger.png)](spaceships/the-dagger/)
+[![The Swallow](thumbnails/the-swallow.png)](spaceships/the-swallow/)
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](ships/hover-scooter/)
 
