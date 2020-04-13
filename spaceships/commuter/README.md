@@ -38,3 +38,6 @@ I liked the cockpit of the [Saucer](../saucer/) so much, I wanted to reuse it fo
 * Time needed to digitalize: ~20 minutes
 * Dimensions: 13x6x6cm (with pedestals extended), 67g, 91 parts, 49 distinct parts
 
+![Real Commuter with open cockpit](real_commuter.jpg)
+![Real Commuter with cargo attached](real_commuter_with_cargo.jpg)
+
