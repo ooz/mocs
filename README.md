@@ -12,6 +12,7 @@ My Lego creations with instructions and background information.
 [![Good Industries Saucer](thumbnails/saucer.png)](spaceships/saucer/)
 [![The Dagger](thumbnails/the_dagger.png)](spaceships/the-dagger/)
 [![The Swallow](thumbnails/the-swallow.png)](spaceships/the-swallow/)
+[![Good Industries Commuter](thumbnails/commuter.png)](spaceships/commuter/)
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](ships/hover-scooter/)
 
