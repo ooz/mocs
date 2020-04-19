@@ -13,6 +13,7 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![The Dagger](thumbnails/the_dagger.png)](spaceships/the-dagger/)
 [![The Swallow](thumbnails/the-swallow.png)](spaceships/the-swallow/)
 [![Good Industries Commuter](thumbnails/commuter.png)](spaceships/commuter/)
+[![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](ships/hover-scooter/)
 
