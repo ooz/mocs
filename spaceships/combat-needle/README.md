@@ -26,6 +26,7 @@ description: Armed and armored vessel from scrap metal
 * One pin connector per side for extension
 * Two laser cannons, one missile launcher and further attachment points in the front (minifigure gear or instruments)
 * 2x4 stud connectors on each side to attach cargo or further armor plates
+* Can start/stand upright on its rear engine
 
 ## Meta
 
