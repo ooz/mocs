@@ -27,7 +27,7 @@ The Needle is what you assemble and fly when you do not have the funding for a [
 
 ## Meta
 
-The design shows some compromises made due to running out of suitable bricks due to having built the [Mosquito](../the-mosquito/), [Wedge](../the-wedge/), [UniPod](../universal-pod/) before. It was originally intended to be the cockpit for the ["Square Falcon"](#TODO).
+The design shows some compromises made due to running out of suitable bricks due to having built the [Mosquito](../the-mosquito/), [Wedge](../the-wedge/), [UniPod](../universal-pod/) before. It was originally intended to be the cockpit for the ["Square Falcon"](../the-square-falcon/).
 
 * The part base are various Lego Star Wars sets
 * Time needed to digitalize: ~40 minutes
