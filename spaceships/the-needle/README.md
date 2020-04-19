@@ -23,7 +23,7 @@ The Needle is what you assemble and fly when you do not have the funding for a [
 * The engine provides more minifigure gear storage options. Alternatively the cannon can also be mounted on the engine
 * Cargo pod with turret and further connection points
 * Compatible with the engines of the [Wedge](../the-wedge) and [UniPod](../universal-pod/)
-* The cockpit pod can be attached to the ["Square Falcon"](#TODO)
+* The cockpit pod can be attached to the ["Square Falcon"](../the-square-falcon/)
 
 ## Meta
 
