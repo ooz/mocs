@@ -32,3 +32,7 @@ description: Armed and armored vessel from scrap metal
 
 The front part with weaponry and sensors was inspired by assault helicopters. Its asymmetry is supposed to mirror and balance the rear asymmetry inspired by [The Needle](../the-needle/).
 
+![Real Combat Needle with open cockpit](real_combat-needle.jpg)
+![Real Combat Needle standing upright with cargo](real_combat-needle_2.jpg)
+![Real Combat Needle standing upright, rear view](real_combat-needle_3.jpg)
+
