@@ -37,3 +37,9 @@ Mini pirate ship. Designed 2019, not knowing that 2020 would be such a pirate ye
 * Can be built at the same time as the [Modular Rockets](../modular-rockets/) using the 60th anniversary parts
 * 109 parts, 64 distinct parts
 
+![Real pirate ship: Arrrr!](real_pirate_ship.jpg)
+![Real pirate ship: look into the cabin, with removed plank](real_pirate_ship_cabin.jpg)
+![Real pirate ship with plank extended and dinghy in water](real_pirate_ship_plank_dinghy.jpg)
+![Real pirate ship with crane handling loot](real_pirate_ship_with_crane.jpg)
+![Real pirate ship built alongside the modular rockets](real_pirate_ship_with_rockets.jpg)
+
