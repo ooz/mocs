@@ -1,43 +1,47 @@
-all:
+.PHONY: clean clean_coverage \
+install_pipenv init test deploy \
+all help newpost openlatest update
+
+all: ## Build the site, generate all pages from *.md files
 	pipenv run python gg.py ./
 
-fire: all
-	git commit -am "Lazy auto update `date`" || true
-	git push
+help: ## Show this help
+	@grep -Eh '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-realfire: all
-	git commit -am "Emergency update `date`" || true
-	git push -f origin master
+newpost: ## Create a new post .md file with current time
+	pipenv run python gg.py --newpost
 
-newpost:
-	bash newpost.sh
+openlatest: ## Open the latest .md file in vim
+	@ls -1t `find . -type f -name '*.md'` | head -n 1 | xargs -o vim
 
-# Uhhh, manual effort needed every year! Fix!
-openlatest:
-	@vim 2018/`ls 2018/ -t | head -n 1`
-
-update:
+update: ## Update ggpy
 	wget -q https://raw.githubusercontent.com/ooz/ggpy/master/gg.py -O gg.py
 	wget -q https://raw.githubusercontent.com/ooz/ggpy/master/Pipfile -O Pipfile
-	wget -q https://raw.githubusercontent.com/ooz/ggpy/master/newpost.sh -O newpost.sh
 	@echo "Unfortunately the Makefile cannot be updated automatically!"
 	@echo "Run the following command to update:"
 	@echo "wget -q https://raw.githubusercontent.com/ooz/ggpy/master/Makefile -O Makefile"
 
-# Setup / dependencies
-install_pipenv:
+# Setup / dependencies / CI/CD
+install_pipenv: ## Install pipenv for initial setup or CI
 	pip3 install pipenv
 
-init:
+init: ## Initial setup of pipenv
 	pipenv --python 3
 	pipenv install
 
-test: all
+test: | clean_coverage ## Run ggpy tests
 	pipenv install --dev
-	pipenv run pytest
+	pipenv run coverage run --source=. -m pytest -vv
+	pipenv run coverage html --omit="test/*"
+	pipenv run coverage report --omit="test/*"
+
+deploy: all ## Build and publish by CI
+	git add .
+	git commit -m "Build by CircleCI `date` [skip ci]" || true
+	git push
 
 # Cleanup
-clean:
+clean: ## Cleanup python artifacts
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
@@ -48,6 +52,6 @@ clean:
 	rm -f *.egg-info
 	pipenv --rm || true
 
-.PHONY: clean \
-install_pipenv init test \
-all fire realfire newpost openlatest update
+clean_coverage: ## Cleanup python test coverage artifacts
+	rm -rf htmlcov/
+	rm -f .coverage
