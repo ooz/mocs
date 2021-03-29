@@ -4,8 +4,6 @@ title: The Swallow
 description: Light reconnaissance fighter
 ---
 
-# The Swallow
-
 A light reconnaissance fighter.
 
 [Instructions (includes part list)](the-swallow-instructions.pdf)

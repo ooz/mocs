@@ -4,8 +4,6 @@ title: The Needle
 description: Scrap metal pod
 ---
 
-# The Needle
-
 The Needle is what you assemble and fly when you do not have the funding for a [UniPod](../universal-pod/). Less pilot comfort, less armor, less weapons and fewer docking slots. It still gets the job done.
 
 [Instructions (includes part list)](the-needle-instructions.pdf)

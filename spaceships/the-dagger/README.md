@@ -4,8 +4,6 @@ title: The Dagger
 description: Superior light assault fighter
 ---
 
-# The Dagger
-
 The Dagger is a light assault fighter.
 
 [Instructions (includes part list)](the-dagger-instructions.pdf)

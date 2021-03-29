@@ -4,8 +4,6 @@ title: Good Industries Universal Pod
 description: Universal spacecraft for logistics, resource extraction, construction, maintenance and heavy assault.
 ---
 
-# Good Industries Universal Pod
-
 The Good Industries Universal Pod ("GI Pod", "UniPod" or "UP") is a modular spacecraft supposed to cover all imperialistic needs like logistics, resource extraction, construction, structure maintenance and heavy assault.
 The project was 30 megaticks late and totally out of other budgets. Still, as claimed by military, industrial and political leaders, the UniPod is unparalleled to maintain peace and prosperity across the galaxies.
 

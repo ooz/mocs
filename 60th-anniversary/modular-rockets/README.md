@@ -4,8 +4,6 @@ title: Modular Rockets
 description: Five rocket segments that can be combined in various ways
 ---
 
-# Modular Rockets
-
 [Instructions (includes part list)](modular-rockets-instructions.pdf)
 
 ## Rendered images

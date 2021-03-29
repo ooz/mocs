@@ -1,10 +1,8 @@
 ---
 date: 2019-06-23T22:13:41Z
-title: Saucer
+title: Good Industries Saucer
 description: Retro sports spaceship
 ---
-
-# Good Industries Saucer
 
 The Good Industries "Saucer" is a retro-style sports spaceship.
 It features rear and bottom docking points, in case the family needs to come along.

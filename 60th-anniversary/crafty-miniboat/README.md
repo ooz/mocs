@@ -4,8 +4,6 @@ title: Crafty Miniboat
 description: Small modular boat inspired by Lego Minecraft
 ---
 
-# Crafty Miniboat
-
 [Instructions (includes part list)](crafty-miniboat-instructions.pdf)
 
 ![Crafty Miniboat: diagonal front view](crafty_miniboat.png)

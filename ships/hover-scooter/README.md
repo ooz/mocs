@@ -4,8 +4,6 @@ title: Hover Scooter
 description: Minimalistic scooter
 ---
 
-# Hover Scooter
-
 Small scooter for up to 2 minifigures. With controls, windshield, 2 gear attachment points and a cannon that can also hold a pole.
 
 [Instructions (includes part list)](hover-scooter-instructions.pdf)

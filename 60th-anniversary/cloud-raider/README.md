@@ -4,8 +4,6 @@ title: Cloud Raider
 description: A mobile air raiding scooter
 ---
 
-# Cloud Raider
-
 [Instructions (includes part list)](cloud-raider-instructions.pdf)
 
 ![Cloud Raider: diagonal front view](cloud_raider.png)

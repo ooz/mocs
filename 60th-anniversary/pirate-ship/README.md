@@ -4,8 +4,6 @@ title: Pirate Ship
 description: There have been plenty lately...
 ---
 
-# Pirate Ship
-
 Mini pirate ship. Designed 2019, not knowing that 2020 would be such a pirate year! ;)
 
 [Instructions (includes part list)](pirate_ship.pdf)

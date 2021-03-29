@@ -4,8 +4,6 @@ title: Combat Needle
 description: Armed and armored vessel from scrap metal
 ---
 
-# Combat Needle
-
 [The Needle](../the-needle/) with improved combat capabilities, better pilot comfort and cargo/armor attachment points.
 
 [Instructions (includes part list)](combat-needle-instructions.pdf)

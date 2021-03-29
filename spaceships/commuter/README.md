@@ -4,8 +4,6 @@ title: Commuter
 description: Working class spaceship
 ---
 
-# Commuter
-
 The Good Industries "Commuter" carries the average office worker to the job and back home again. Remote work is no option for space-scale businesses!
 
 [Instructions (includes part list)](commuter-instructions.pdf)
