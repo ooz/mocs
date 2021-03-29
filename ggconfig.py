@@ -17,6 +17,6 @@ config = {
         'url': 'https://oliz.io'
     },
     'social': {
-        'github_url': 'https://github.com/ooz'
+        'github_url': 'https://github.com/ooz/lego'
     }
 }
