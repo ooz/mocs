@@ -39,3 +39,13 @@ It is still ones of my favorites due to the interesting asymmetry, small form fa
 
 ![My Mosquito with pilot, droid and cargo](real_on_the_ground.jpg)
 ![My Mosquito with folded wing, droid and no cargo](real_compact.jpg)
+
+## 2020 Edition
+
+End of 2020 I iterated on the model again, minimizing the massive "nose" and making the front scaffold "strings" more prominent. The weapon assembly got another cannon.
+
+![2020 Mosquito with smaller nose, more prominent strings](2020-edition/mosquito2020_front.jpg)
+![2020 Mosquito from below](2020-edition/mosquito2020_below.jpg)
+![2020 Mosquito: cannon assembly](2020-edition/mosquito2020_cannon.jpg)
+![2020 Mosquito: cockpit assembly](2020-edition/mosquito2020_cockpit_assembly.jpg)
+![2020 Mosquito: cockpit assembly from below](2020-edition/mosquito2020_cockpit_assembly_below.jpg)
