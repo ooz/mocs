@@ -30,6 +30,7 @@ My own Lego creations ("MOCs") with instructions and background information.
 
 ### Alternative Builds and Modifications
 
+* [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
 * [Minecart Deluxe](alts-mods/minecart-deluxe/)
 
 ## Philosophy
