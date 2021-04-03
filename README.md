@@ -15,7 +15,7 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![Good Industries Commuter](thumbnails/commuter.png)](spaceships/commuter/)
 [![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
 
-[![Hover Scooter](thumbnails/hover_scooter.png)](ships/hover-scooter/)
+[![Hover Scooter](thumbnails/hover_scooter.png)](vehicles/hover-scooter/)
 
 [![Modular Rockets](thumbnails/modular_rockets.png)](60th-anniversary/modular-rockets/)
 [![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)

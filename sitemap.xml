@@ -25,10 +25,6 @@
     <lastmod>2021-03-29</lastmod>
   </url>
   <url>
-    <loc>https://oliz.io/lego/ships/hover-scooter/</loc>
-    <lastmod>2021-03-29</lastmod>
-  </url>
-  <url>
     <loc>https://oliz.io/lego/spaceships/combat-needle/</loc>
     <lastmod>2021-03-29</lastmod>
   </url>
@@ -67,5 +63,8 @@
   <url>
     <loc>https://oliz.io/lego/spaceships/universal-pod/</loc>
     <lastmod>2021-03-29</lastmod>
+  </url>
+  <url>
+    <loc>https://oliz.io/lego/vehicles/hover-scooter/</loc>
   </url>
 </urlset>
