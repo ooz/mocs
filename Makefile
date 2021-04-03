@@ -9,7 +9,7 @@ help: ## Show this help
 	@grep -Eh '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 newpost: ## Create a new post .md file with current time
-	pipenv run python gg.py --newpost
+	bash newpost.sh
 
 openlatest: ## Open the latest .md file in vim
 	@ls -1t `find . -type f -name '*.md'` | head -n 1 | xargs -o vim
