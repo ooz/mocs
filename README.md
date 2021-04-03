@@ -33,6 +33,15 @@ My own Lego creations ("MOCs") with instructions and background information.
 * [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
 * [Minecart Deluxe](alts-mods/minecart-deluxe/)
 
+### Backlog
+
+TODO list of designs I still want to digitalize:
+
+* Personal Pod
+* Space Van
+* Lava Sails (alt build)
+* Satellite maintenance mission (mod build, just photos)
+
 ## Philosophy
 
 * I prefer models that are playable, functional, sturdy and at a scale that can conveniently be moved.
@@ -65,5 +74,4 @@ Resize thumbnails:
 ```
 mogrify -resize 256 *.png
 ```
-
 
