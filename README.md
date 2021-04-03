@@ -4,6 +4,8 @@ My own Lego creations ("MOCs") with instructions and background information.
 
 ## Index
 
+### Spaceships
+
 [![The Mosquito](thumbnails/mosquito_front.png)](spaceships/the-mosquito/)
 [![The Wedge](thumbnails/the_wedge_front.png)](spaceships/the-wedge/)
 [![Good Industries Universal Pod](thumbnails/universal_pod.png)](spaceships/universal-pod/)
@@ -15,7 +17,11 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![Good Industries Commuter](thumbnails/commuter.png)](spaceships/commuter/)
 [![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
 
+### Other Vehicles
+
 [![Hover Scooter](thumbnails/hover_scooter.png)](vehicles/hover-scooter/)
+
+### 60th Anniversary Models
 
 [![Modular Rockets](thumbnails/modular_rockets.png)](60th-anniversary/modular-rockets/)
 [![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)
@@ -27,7 +33,8 @@ My own Lego creations ("MOCs") with instructions and background information.
 * I prefer models that are playable, functional, sturdy and at a scale that can conveniently be moved.
 * I only use legal connections.
 * I prefer minifigure scale.
-* I treat greeble as an afterthought and do not compromise on the above in favor of more visual appeal.
+* My designs should be open for modification.
+* I treat greeble as an afterthought and do not compromise on the above in favor of more visual appeal or realism.
 
 Design approach:
 
