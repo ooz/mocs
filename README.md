@@ -28,6 +28,10 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
 
+### Alternative Builds and Modifications
+
+* [Minecart Deluxe](alts-mods/minecart-deluxe/)
+
 ## Philosophy
 
 * I prefer models that are playable, functional, sturdy and at a scale that can conveniently be moved.
