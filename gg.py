@@ -384,7 +384,9 @@ def template_index(index, posts, config=None):
         if (day != '' and title != ''):
             posts_html.append('<tr><td>%s</td><td><a href="%s">%s</a></td></tr>' % (day, url, title))
     posts_html = '\n'.join(posts_html)
-    index_title = index.get('title', 'Index')
+    index_title = index.get('title', '')
+    if not len(index_title):
+        index_title = 'Index'
     header_content = f'''<a href="{author_url}"><img src="{logo}" class="avatar" /></a>
 <h1>{index_title}</h1>'''
     body = html_tag_block('table', html_tag_block('tbody', posts_html))
@@ -473,8 +475,8 @@ def generate(directories, config=None):
             if TAG_INDEX not in post['tags']:
                 write_file(post['filepath'], post['html'])
 
-    posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
     indices = [post for post in posts if TAG_INDEX in post['tags']]
+    posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
     for index in indices:
         write_file(index['filepath'], template_index(index, posts, config))
 
