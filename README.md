@@ -16,6 +16,7 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![The Swallow](thumbnails/the-swallow.png)](spaceships/the-swallow/)
 [![Good Industries Commuter](thumbnails/commuter.png)](spaceships/commuter/)
 [![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
+[![Good Industries Personal Pod](thumbnails/personal_pod.png)](spaceships/personal-pod/)
 
 ### Other Vehicles
 
