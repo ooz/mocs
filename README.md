@@ -38,7 +38,6 @@ My own Lego creations ("MOCs") with instructions and background information.
 
 TODO list of designs I still want to digitalize:
 
-* Personal Pod
 * Space Van
 * Lava Sails (alt build)
 * Satellite maintenance mission (mod build, just photos)
