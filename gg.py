@@ -370,7 +370,7 @@ def template_post(post, config=None):
         _template_common_body_and_end(header_content, body, footer_content)
     ])
 
-def template_index(posts, config=None):
+def template_index(index, posts, config=None):
     config = config or {}
     canonical_url = config.get('site', {}).get('base_url', '')
     root_title = config.get('site', {}).get('title', '')
@@ -384,12 +384,13 @@ def template_index(posts, config=None):
         if (day != '' and title != ''):
             posts_html.append('<tr><td>%s</td><td><a href="%s">%s</a></td></tr>' % (day, url, title))
     posts_html = '\n'.join(posts_html)
+    index_title = index.get('title', 'Index')
     header_content = f'''<a href="{author_url}"><img src="{logo}" class="avatar" /></a>
-<h1>Index</h1>'''
+<h1>{index_title}</h1>'''
     body = html_tag_block('table', html_tag_block('tbody', posts_html))
     footer_content = '\n'.join([footer_navigation(), about_and_social_icons(config)])
     return '\n'.join([
-        _template_common_start('Index', canonical_url, config),
+        _template_common_start(index_title, canonical_url, config),
         _template_common_body_and_end(header_content, body, footer_content)
     ])
 
@@ -475,7 +476,7 @@ def generate(directories, config=None):
     posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
     indices = [post for post in posts if TAG_INDEX in post['tags']]
     for index in indices:
-        write_file(post['filepath'], template_index(posts, config))
+        write_file(index['filepath'], template_index(index, posts, config))
 
     generate_sitemap = config.get('site', {}).get('generate_sitemap', False)
     if generate_sitemap:
