@@ -30,3 +30,14 @@ Visual similarities with sarcophagi are just coincidences.
 ## Meta
 
 * Dimensions: 7x5x3cm, 39g, 72 parts, 37 distinct parts
+
+![Real Personal Pod: front view](personal-pod_front.jpg)
+![Real Personal Pod: diagonal front view with hatches open](personal-pod_hatches_open.jpg)
+![Real Personal Pod: with extra engine attached](personal-pod_extra_engine.jpg)
+![Real Personal Pod: with box attached to cannon](personal-pod_gear_cannon.jpg)
+![Real Personal Pod: with box attached to front hatch](personal-pod_gear_hatch.jpg)
+![Real Personal Pod: daisy-chain secured by top hatch](personal-pod_daisy-chain.jpg)
+![Real Personal Pod: with cargo module attached](personal-pod_cargo-module.jpg)
+![Real Personal Pod: with cargo module attached, all hatches open](personal-pod_cargo_all_hatches_open.jpg)
+![Real Personal Pod: alternative cargo module attachment](personal-pod_alternative-cargo.jpg)
+![Cargo module open](cargo_open.jpg)
