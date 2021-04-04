@@ -472,17 +472,19 @@ def generate(directories, config=None):
         for path in paths:
             post = read_post(directory, path, config=config)
             posts.append(post)
-            if TAG_INDEX not in post['tags']:
-                write_file(post['filepath'], post['html'])
 
     indices = [post for post in posts if TAG_INDEX in post['tags']]
-    posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
+    just_posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
     for index in indices:
-        write_file(index['filepath'], template_index(index, posts, config))
+        index['html'] = template_index(index, just_posts, config)
+    if config.get('site', {}).get('generate_sitemap', False):
+        posts.append({
+            'filepath': 'sitemap.xml',
+            'html': template_sitemap(just_posts, config)
+        })
 
-    generate_sitemap = config.get('site', {}).get('generate_sitemap', False)
-    if generate_sitemap:
-        write_file('sitemap.xml', template_sitemap(posts, config))
+    for post in posts:
+        write_file(post['filepath'], post['html'])
 
 def convert_canonical(directory, targetpath, config=None):
     config = config or {}
