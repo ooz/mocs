@@ -25,6 +25,10 @@ import sys
 import time
 import markdown
 
+##############################################################################
+# MARKDOWN CONVERSION
+##############################################################################
+
 def configure_markdown():
     return markdown.Markdown(
         extensions = [
@@ -40,6 +44,37 @@ def configure_markdown():
             'pymdownx.superfences'
         ]
     )
+
+def markdown2post(content='', config=None):
+    config = config or {}
+    MD = configure_markdown()
+    html_section = MD.reset().convert(content)
+    date = convert_meta(MD, 'date')
+    tags = convert_meta(MD, 'tags')
+    title = convert_meta(MD, 'title')
+    raw_title = convert_meta(MD, 'title', raw=True)
+    description = convert_meta(MD, 'description', default=title)
+    raw_description = convert_meta(MD, 'description', default=raw_title, raw=True)
+    html_headline = MD.reset().convert('# ' + title) if len(title) else ''
+    post = {
+        'date': date,
+        'title': title,
+        'raw_title': raw_title,
+        'description': description,
+        'raw_description': raw_description,
+        'tags': tags,
+        'html_headline': html_headline,
+        'html_section': html_section
+    }
+    return post
+
+def convert_meta(md, field, default='', raw=False):
+    field_value = md.Meta.get(field, '')
+    if len(field_value):
+        if raw:
+            return ''.join(field_value)
+        return escape(', '.join(field_value)) if field == 'tags' else escape(''.join(field_value))
+    return default
 
 ##############################################################################
 # CONTENT FORMATTERS AND SNIPPETS
@@ -294,9 +329,8 @@ function initTheme() { let h=new Date().getHours(); if (h <= 8 || h >= 20) { tog
 # * Rendering index of all non-draft markdown files as HTML
 # * Rendering sitemap
 ##############################################################################
+TAG_DRAFT = '__draft__'
 def template_newpost(title='Title', description='-'):
-    '''Deprecation: 'draft' tag may become '__draft' in the future
-    '''
     now = time.localtime()
     now_utc_formatted = time.strftime('%Y-%m-%dT%H:%M:%SZ', now)
     return \
@@ -304,25 +338,26 @@ f'''---
 title: {title}
 description: {description}
 date: {now_utc_formatted}
-tags: draft
+tags: {TAG_DRAFT}
 ---
 '''
 
-def template_post(canonical_url, body, md, root, config=None):
+def template_post(post, config=None):
     config = config or {}
-    title = convert_meta(md, 'title')
-    date = convert_meta(md, 'date')
-    tags = convert_meta(md, 'tags')
-    description = convert_meta(md, 'description', default=title)
-    raw_title = ''.join(md.Meta.get('title', ''))
-    raw_description = ''.join(md.Meta.get('description', raw_title))
+    canonical_url = post.get('url', '')
+    body = post.get('html_section', '')
+    title = post.get('title', '')
+    date = post.get('date', '')
+    tags = post.get('tags', '')
+    description = post.get('description', '')
+    raw_title = ''.join(post.get('raw_title', ''))
+    raw_description = ''.join(post.get('raw_description', ''))
     base_url = config.get('site', {}).get('base_url', '')
     logo = logo_url(config)
     author_name = config.get('author', {}).get('name', '')
-    title_html = md.reset().convert('# ' + title) if len(title) else ''
-    header_content = header(logo, title_html, date, config)
+    header_content = header(logo, post.get('html_headline', ''), date, config)
     footer_content = [
-        footer_navigation(base_url, root),
+        footer_navigation(base_url, post.get('is_root_index', False)),
         about_and_social_icons(config)
     ]
     footer_content = '\n'.join([content for content in footer_content if content != ''])
@@ -414,29 +449,33 @@ def convert_path(filepath):
 ##############################################################################
 # SIDE-EFFECTS, interacting with filesystem
 ##############################################################################
-def write_file(filepath, content=''):
-    with open(filepath, 'w') as f:
+def read_file(path):
+    with open(path, 'r') as f:
+        return f.read()
+
+def write_file(path, content=''):
+    with open(path, 'w') as f:
         f.write(content)
 
 def create_newpost(title):
     write_file(kebab_case(title) + '.md', template_newpost(title))
 
+TAG_INDEX = '__index__'
 def generate(directories, config=None):
     config = config or {}
-    render_root_readme = config.get('site', {}).get('render_root_readme', True)
     posts = []
     for directory in directories:
         paths = glob.glob(directory + '/**/*.md', recursive=True)
         for path in paths:
-            root_readme = is_root_readme(path)
-            if not root_readme or render_root_readme:
-                post = read_post(directory, path, root=root_readme, config=config)
+            post = read_post(directory, path, config=config)
+            posts.append(post)
+            if TAG_INDEX not in post['tags']:
                 write_file(post['filepath'], post['html'])
-                posts.append(post)
 
-    posts = [post for post in posts if 'draft' not in post['tags']]
-    if not render_root_readme:
-        write_file('index.html', template_index(posts, config))
+    posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
+    indices = [post for post in posts if TAG_INDEX in post['tags']]
+    for index in indices:
+        write_file(post['filepath'], template_index(posts, config))
 
     generate_sitemap = config.get('site', {}).get('generate_sitemap', False)
     if generate_sitemap:
@@ -458,32 +497,17 @@ def convert_canonical(directory, targetpath, config=None):
 def is_root_readme(path):
     return os.path.relpath(path) == 'README.md'
 
-def read_post(directory, filepath, root=False, config=None):
-    config = config or {}
-    MD = configure_markdown()
-    with open(filepath, 'r') as infile:
-        markdown_post = infile.read()
-        html_post = MD.reset().convert(markdown_post)
-        targetpath = convert_path(filepath)
-        canonical_url = convert_canonical(directory, targetpath, config)
-        date = convert_meta(MD, 'date')
-        tags = convert_meta(MD, 'tags')
-        title = convert_meta(MD, 'title')
-        return {
-            'filepath': targetpath,
-            'html': template_post(canonical_url, html_post, MD, root, config),
-            'date': date,
-            'url': canonical_url,
-            'title': title,
-            'tags': tags,
-            'last_modified': last_modified(filepath)
-        }
-
-def convert_meta(md, field, default=''):
-    field_value = md.Meta.get(field, '')
-    if len(field_value):
-        return escape(', '.join(field_value)) if field == 'tags' else escape(''.join(field_value))
-    return default
+def read_post(directory, filepath, config=None):
+    markdown_content = read_file(filepath)
+    post = markdown2post(markdown_content, config)
+    targetpath = convert_path(filepath)
+    canonical_url = convert_canonical(directory, targetpath, config)
+    post['filepath'] = targetpath
+    post['url'] = canonical_url
+    post['last_modified'] = last_modified(filepath)
+    post['is_root_index'] = is_root_readme(filepath)
+    post['html'] = template_post(post, config)
+    return post
 
 def last_modified(filepath):
     repo = git.Repo()

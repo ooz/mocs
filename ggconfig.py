@@ -4,7 +4,6 @@
 config = {
     'site': {
         'base_url': 'https://oliz.io/lego',
-        'render_root_readme': True,
         'generate_sitemap': True,
         'title': 'Lego Designs',
         'logo': 'static/owl.png',
