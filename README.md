@@ -75,3 +75,11 @@ Resize thumbnails:
 mogrify -resize 256 *.png
 ```
 
+Rendering settings:
+
+* 1024x768 size, "High" quality
+* "Transparent" background, "Floor shadow" enabled
+* Light: "Asteroid" (spaceships), "Dawn" (ship, atmospheric vehicles)
+* Material effects:
+    * "UV Degradation" on, Min. `0.15`, Max. `0.5`
+    * other effects off
