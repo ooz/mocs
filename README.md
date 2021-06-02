@@ -52,11 +52,12 @@ TODO list of designs I still want to digitalize:
 
 ## Philosophy
 
-* I prefer models that are playable, functional, sturdy and at a scale that can conveniently be moved.
-* I only use legal connections.
-* I prefer minifigure scale.
-* My designs should be open for modification.
-* I treat greeble as an afterthought and do not compromise on the above in favor of more visual appeal or realism.
+*Fictive abstraction over realism*
+
+* Playable, functional, robust and can be moved conveniently 
+* Minifigure scale is preferred
+* All designs are open for modification
+* Greeble is an afterthought and does not compromise the above in favor of more visual appeal or detail
 
 Design approach:
 
