@@ -34,6 +34,14 @@ My own Lego creations ("MOCs") with instructions and background information.
 * [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
 * [Minecart Deluxe](alts-mods/minecart-deluxe/)
 
+### Legacy 
+
+Models built only from old bricks:
+
+* [Propeller Pirate Bike](legacy/pirate-bike/)
+* [Cloud Gunner Dinghy](legacy/cloud-gunner/)
+* [Space Capsule](legacy/space-capsule/)
+
 ### Backlog
 
 TODO list of designs I still want to digitalize:
