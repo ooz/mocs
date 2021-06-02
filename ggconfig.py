@@ -3,7 +3,7 @@
 
 config = {
     'site': {
-        'base_url': 'https://oliz.io/lego',
+        'base_url': 'https://oliz.io/mocs',
         'generate_sitemap': True,
         'title': 'Lego Designs',
         'logo': 'static/owl.png',
@@ -16,6 +16,6 @@ config = {
         'url': 'https://oliz.io'
     },
     'social': {
-        'github_url': 'https://github.com/ooz/lego'
+        'github_url': 'https://github.com/ooz/mocs'
     }
 }
