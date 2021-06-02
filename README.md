@@ -39,7 +39,8 @@ My own Lego creations ("MOCs") with instructions and background information.
 Models built only from old bricks:
 
 * [Propeller Pirate Bike](legacy/pirate-bike/)
-* [Cloud Gunner Dinghy](legacy/cloud-gunner/)
+* [Cloud Gunner](legacy/junk-propeller/)
+<!-- * [Junk Propeller Plane](legacy/cloud-gunner/) -->
 * [Space Capsule](legacy/space-capsule/)
 
 ### Backlog
