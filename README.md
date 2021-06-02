@@ -1,6 +1,6 @@
-# Lego Creations
+# Lego Designs
 
-My Lego creations ("MOCs") with instructions and background information.
+My own Lego creations ("MOCs") with instructions and background information.
 
 ## Index
 
