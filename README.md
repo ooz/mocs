@@ -51,6 +51,7 @@ TODO list of designs I still want to digitalize:
 * Space Van
 * Lava Sails (alt build)
 * Satellite maintenance mission (mod build, just photos)
+* Triple Enforcer BT
 
 ## Philosophy
 
