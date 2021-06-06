@@ -2,9 +2,7 @@
 
 My own Lego creations ("MOCs") with instructions and background information.
 
-## Index
-
-### Spaceships
+## Spaceships
 
 [![The Mosquito](thumbnails/mosquito_front.png)](spaceships/the-mosquito/)
 [![The Wedge](thumbnails/the_wedge_front.png)](spaceships/the-wedge/)
@@ -18,23 +16,23 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
 [![Good Industries Personal Pod](thumbnails/personal_pod.png)](spaceships/personal-pod/)
 
-### Other Vehicles
+## Other Vehicles
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](vehicles/hover-scooter/)
 
-### 60th Anniversary Models
+## 60th Anniversary Models
 
 [![Modular Rockets](thumbnails/modular_rockets.png)](60th-anniversary/modular-rockets/)
 [![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)
 [![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
 
-### Alternative Builds and Modifications
+## Alternative Builds and Modifications
 
 * [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
 * [Minecart Deluxe](alts-mods/minecart-deluxe/)
 
-### Legacy 
+## Legacy
 
 Models built only from old bricks:
 
@@ -44,7 +42,7 @@ Models built only from old bricks:
 
 <!-- * [Junk Propeller Plane](legacy/junk-propeller/) -->
 
-### Backlog
+## Backlog
 
 TODO list of designs I still want to digitalize:
 
@@ -57,7 +55,7 @@ TODO list of designs I still want to digitalize:
 
 *Fictive abstraction over realism*
 
-* Playable, functional, robust and can be moved conveniently 
+* Playable, functional, robust and can be moved conveniently
 * Minifigure scale is preferred
 * All designs are open for modification
 * Greeble is an afterthought and does not compromise the above in favor of more visual appeal or detail
