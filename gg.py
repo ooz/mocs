@@ -4,7 +4,7 @@
 Author: Oliver Z., https://oliz.io
 Description: Minimal static site generator easy to use with GitHub Pages o.s.
 Website: https://oliz.io/ggpy/
-Version: 1.0
+Version: 1.2
 License: Dual-licensed under GNU AGPLv3 or MIT License,
          see LICENSE.txt file for details.
 
@@ -18,7 +18,7 @@ SOFTWARE.
 '''
 
 import argparse
-import git
+
 import glob
 from html import escape
 import os
@@ -129,6 +129,7 @@ def footer_navigation(root_url='', is_index=False, is_root=False):
         nav.append(f'''<a href="{root_url}" class="nav">back</a>''')
     nav.append('''<a href="#" class="nav">top</a>''')
     nav.append('''<a href="javascript:toggleTheme()" class="nav">🌓</a>''')
+    nav.append('''<a href="javascript:toggleFontSize()" class="nav">aA</a>''')
     return '\n'.join(nav)
 
 def about_and_social_icons(config=None):
@@ -261,14 +262,13 @@ def html_closing_boilerplate():
 ## From: https://raw.githubusercontent.com/ooz/templates/master/html/oz.css
 def inline_style():
     return '''body {
-    font-size: 18px;
     font-family: sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #363636;
     background: #FFF;
     margin: 1rem auto;
-    padding: 0 10px;
-    max-width: 700px;
+    padding: 0 .6rem;
+    max-width: 44rem;
     scroll-behavior: smooth;
 }
 a { color: #07A; text-decoration: none; }
@@ -280,7 +280,7 @@ blockquote {
     padding: 0 .5rem;
 }
 code {
-    font-size: 80%;
+    font-size: .9rem;
     background: #EAEAEA;
     padding: .2rem .5rem;
     white-space: nowrap;
@@ -294,9 +294,9 @@ ul.task-list, ul.task-list li.task-list-item {
     list-style-type: none;
     list-style-image: none;
 }
-pre { border-left: 0.3rem solid #07A; }
+pre { border-left: .3rem solid #07A; }
 pre > code {
-    font-size: 14px;
+    font-size: .9rem;
     background: #EAEAEA;
     box-sizing: inherit;
     display: block;
@@ -317,9 +317,10 @@ td, th {
 
 .dark-mode { color: #CACACA; background: #363636; }
 .dark-mode a { color: #0A7; }
-.dark-mode blockquote { background: #222; border-left: 0.3rem solid #0A7; }
+.dark-mode blockquote { background: #222; border-left: .3rem solid #0A7; }
 .dark-mode code { background: #222; }
-.dark-mode pre { border-left: 0.3rem solid #0A7; }
+.dark-mode pre { border-left: .3rem solid #0A7; }
+.large-font { font-size: 1.2em; }
 
 .avatar { border-radius: 50%; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); max-width: 3rem; }
 .nav { float: left; margin-right: 1rem; }
@@ -327,7 +328,8 @@ td, th {
 # From: https://raw.githubusercontent.com/ooz/templates/master/html/oz-dark-mode.js
 def inline_javascript():
     return '''function toggleTheme() { document.body.classList.toggle("dark-mode") }
-function initTheme() { let h=new Date().getHours(); if (h <= 8 || h >= 20) { toggleTheme() } }'''
+function initTheme() { let h=new Date().getHours(); if (h <= 8 || h >= 20) { toggleTheme() } }
+function toggleFontSize() { document.body.classList.toggle("large-font") }'''
 
 ##############################################################################
 # TEMPLATES
@@ -507,10 +509,17 @@ def read_post(directory, filepath, config=None):
     post['html'] = template_page(post, config)
     return post
 
+REPO = None
+try:
+    import git
+    REPO = git.Repo()
+except ImportError:
+    print('No gitpython package found, degrading functionality (no last_modified support)!', file=sys.stderr)
+
 def last_modified(filepath):
-    repo = git.Repo()
-    for commit in repo.iter_commits(paths=filepath, max_count=1):
-        return time.strftime('%Y-%m-%d', time.gmtime(commit.authored_date))
+    if REPO:
+        for commit in REPO.iter_commits(paths=filepath, max_count=1):
+            return time.strftime('%Y-%m-%d', time.gmtime(commit.authored_date))
     return ''
 
 ##############################################################################
