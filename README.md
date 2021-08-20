@@ -50,6 +50,8 @@ TODO list of designs I still want to digitalize:
 * Lava Sails (alt build)
 * Satellite maintenance mission (mod build, just photos)
 * Triple Enforcer BT
+* The Shiv
+* Biwak Pod
 
 ## Philosophy
 
@@ -59,6 +61,7 @@ TODO list of designs I still want to digitalize:
 * Minifigure scale is preferred
 * All designs are open for modification
 * Greeble is an afterthought and does not compromise the above in favor of more visual appeal or detail
+* Models for children, lore for adults
 
 Design approach:
 
