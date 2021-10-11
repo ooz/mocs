@@ -42,7 +42,7 @@ It is still ones of my favorites due to the interesting asymmetry, small form fa
 
 ## 2020 Edition
 
-End of 2020 I iterated on the model again, minimizing the massive "nose" and making the front scaffold "strings" more prominent. The weapon assembly got another cannon.
+End of 2020 I iterated on the model again, minimizing the massive "nose" and making the front scaffold "stings" more prominent. The weapon assembly got another cannon.
 
 ![2020 Mosquito with smaller nose, more prominent strings](2020-edition/mosquito2020_front.jpg)
 ![2020 Mosquito from below](2020-edition/mosquito2020_below.jpg)
