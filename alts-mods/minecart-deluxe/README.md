@@ -11,7 +11,7 @@ Couldn't resist getting [21155 Minecraft "The Creeper Mine"](https://www.brickli
 
 ## Features
 
-Read-mounted grill to:
+Rear-mounted grill to:
 
 * Attach gear, lamps, redstone engines
 * Grant hold to minifigures
