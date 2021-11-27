@@ -4,7 +4,7 @@
 Author: Oliver Z., https://oliz.io
 Description: Minimal static site generator easy to use with GitHub Pages o.s.
 Website: https://oliz.io/ggpy/
-Version: 2.0.1
+Version: 2.0.1+dev
 License: Dual-licensed under GNU AGPLv3 or MIT License,
          see LICENSE.txt file for details.
 
@@ -19,12 +19,15 @@ SOFTWARE.
 
 import argparse
 
+import datetime
+from email import utils
 import glob
 from html import escape
 import os
 import sys
 import time
 import markdown
+from xml.sax.saxutils import escape as xmlescape
 
 ##############################################################################
 # META TAGS WITH SPECIAL FUNCTION
@@ -142,14 +145,12 @@ def post_header(title_html, date='', config=None):
 </div>'''
     return header
 
-def footer_navigation(root_url='', is_index=False, is_root=False):
-    nav = []
-    if len(root_url) and not is_index and not is_root:
-        nav.append(f'''<a href="{root_url}" class="nav">back</a>''')
-    nav.append('''<a href="#" class="nav">top</a>''')
-    nav.append('''<a href="javascript:toggleTheme()" class="nav">🌓</a>''')
-    nav.append('''<a href="javascript:toggleFontSize()" class="nav">aA</a>''')
-    return '\n'.join(nav)
+def footer_navigation():
+    return '\n'.join([
+        '''<a href="#" class="nav">top</a>''',
+        '''<a href="javascript:toggleTheme()" class="nav">🌓</a>''',
+        '''<a href="javascript:toggleFontSize()" class="nav">aA</a>'''
+    ])
 
 def about_and_social_icons(config=None):
     config = config or {}
@@ -313,7 +314,7 @@ def inline_style():
     color: #363636;
     background: #FFF;
     margin: 1rem auto;
-    padding: 0 .6rem;
+    padding: 0 .6rem 1rem .6rem;
     max-width: 44em;
     scroll-behavior: smooth;
 }
@@ -386,13 +387,11 @@ function toggleFontSize() { document.body.classList.toggle("large-font") }'''
 # * Rendering sitemap
 ##############################################################################
 def template_newpost(title='Title', description='-'):
-    now = time.localtime()
-    now_utc_formatted = time.strftime('%Y-%m-%dT%H:%M:%SZ', now)
     return \
 f'''---
 title: {title}
 description: {description}
-date: {now_utc_formatted}
+date: {now_utc_formatted()}
 tags: {TAG_DRAFT}
 ---
 '''
@@ -406,14 +405,13 @@ def template_page(post, config=None):
     description = post.get('description', '')
     raw_title = ''.join(post.get('raw_title', ''))
     raw_description = ''.join(post.get('raw_description', ''))
-    base_url = config.get('site', {}).get('base_url', '')
     logo = logo_url(config)
     author_name = config.get('author', {}).get('name', '')
     header_content = header(logo, post.get('html_headline', ''), date, config) if TAG_NO_HEADER not in tags else ''
     footer_content = ''
     if TAG_NO_FOOTER not in tags:
         footer_content = [
-            footer_navigation(base_url, post.get('is_index', False), post.get('is_root', False)),
+            footer_navigation(),
             about_and_social_icons(config)
         ]
         footer_content = '\n'.join([content for content in footer_content if len(content)])
@@ -451,7 +449,7 @@ def _template_common_body_and_end(header, section, footer):
 
 def template_sitemap(posts, config=None):
     config = config or {}
-    posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
+    posts = [post for post in posts if TAG_DRAFT not in post.get('tags', []) and TAG_INDEX not in post.get('tags', [])]
     sitemap_xml = []
     sitemap_xml.append('<?xml version="1.0" encoding="utf-8" standalone="yes" ?>')
     sitemap_xml.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
@@ -467,6 +465,45 @@ def template_sitemap(posts, config=None):
         sitemap_xml.append('  </url>')
     sitemap_xml.append('</urlset>\n')
     return '\n'.join(sitemap_xml)
+
+def template_rss(posts, config=None):
+    config = config or {}
+    posts = [post for post in posts if TAG_DRAFT not in post.get('tags', []) and TAG_INDEX not in post.get('tags', [])]
+    base_url = xmlescape(config.get('site', {}).get('base_url', ''))
+    title = xmlescape(config.get('site', {}).get('title', ''))
+    title = base_url if (title == '' and base_url != '') else title
+    rss_xml = []
+    rss_xml.append('''<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>''')
+    rss_xml.append(f'''    <title>{title}</title>''')
+    rss_xml.append(f'''    <link>{base_url}</link>''')
+    rss_xml.append(f'''    <description></description>''')
+    rss_xml.append(f'''    <generator>Good Generator.py -- ggpy -- https://oliz.io/ggpy</generator>''')
+    rss_xml.append(f'''    <lastBuildDate>{utils.formatdate()}</lastBuildDate>''')
+    rss_xml.append(f'''    <atom:link href="{'rss.xml' if base_url == '' else f'{base_url}/rss.xml'}" rel="self" type="application/rss+xml" />''')
+    for post in posts:
+        escaped_url = xmlescape(post.get('url', ''))
+        escaped_title = xmlescape(post.get('title', ''))
+        escaped_title = escaped_url if (escaped_title == '' and escaped_url != '') else escaped_title
+        date_to_format = post.get('date', '')
+        date_to_format = post.get('last_modified', '') if date_to_format == '' else date_to_format
+        date_to_format = now_utc_formatted() if date_to_format == '' else date_to_format
+        pub_date = ''
+        try:
+            pub_date = utils.format_datetime(datetime.datetime.strptime(date_to_format, '%Y-%m-%dT%H:%M:%S%z'))
+        except ValueError:
+            pub_date = utils.format_datetime(datetime.datetime.strptime(date_to_format, '%Y-%m-%d'))
+        rss_xml.append(f'''    <item>''')
+        rss_xml.append(f'''      <title>{escaped_title}</title>''')
+        rss_xml.append(f'''      <link>{escaped_url}</link>''')
+        rss_xml.append(f'''      <pubDate>{xmlescape(pub_date)}</pubDate>''')
+        rss_xml.append(f'''      <guid>{escaped_url}</guid>''')
+        rss_xml.append(f'''      <description>{xmlescape(post.get('html_section', ''))}</description>''')
+        rss_xml.append(f'''    </item>''')
+    rss_xml.append('''  </channel>
+</rss>\n''')
+    return '\n'.join(rss_xml)
 
 ##############################################################################
 # PURE LIBRARY FUNCTIONS, UTILITIES AND HELPERS
@@ -510,11 +547,18 @@ def generate(directories, config=None):
     for index in indices:
         index['html_section'] = posts_index(posts)
         index['html'] = template_page(index, config)
+    sitemap_and_rss_files = []
     if config.get('site', {}).get('generate_sitemap', False):
-        posts.append({
+        sitemap_and_rss_files.append({
             'filepath': 'sitemap.xml',
             'html': template_sitemap(posts, config)
         })
+    if config.get('site', {}).get('generate_rss', False):
+        sitemap_and_rss_files.append({
+            'filepath': 'rss.xml',
+            'html': template_rss(posts, config)
+        })
+    posts.extend(sitemap_and_rss_files)
     for post in posts:
         write_file(post['filepath'], post['html'])
 
@@ -531,9 +575,6 @@ def convert_canonical(directory, targetpath, config=None):
             return f'{targetpath[:-10]}'
     return targetpath
 
-def is_root_readme(path):
-    return os.path.relpath(path) == 'README.md'
-
 def read_post(directory, filepath, config=None):
     markdown_content = read_file(filepath)
     post = markdown2post(markdown_content, config)
@@ -542,7 +583,6 @@ def read_post(directory, filepath, config=None):
     post['filepath'] = targetpath
     post['url'] = canonical_url
     post['last_modified'] = last_modified(filepath)
-    post['is_root'] = is_root_readme(filepath)
     post['is_index'] = TAG_INDEX in post['tags']
     post['html'] = template_page(post, config)
     return post
@@ -559,6 +599,10 @@ def last_modified(filepath):
         for commit in REPO.iter_commits(paths=filepath, max_count=1):
             return time.strftime('%Y-%m-%d', time.gmtime(commit.authored_date))
     return ''
+
+def now_utc_formatted():
+    now = time.localtime()
+    return time.strftime('%Y-%m-%dT%H:%M:%SZ', now)
 
 ##############################################################################
 # MAIN PROGRAM
