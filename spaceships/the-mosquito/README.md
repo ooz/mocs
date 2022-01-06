@@ -20,7 +20,7 @@ The Mosquito is a light scout and assault fighter, that is much valued by smuggl
 * Adjustable wing, can also be detached
 * Launcher / light gun and reconnaissance optics (or laser weapons)
 * Large side 4x2 port for small to medium sized cargo
-* Docking port for droids or connector for bricks that should not be attached too firmly
+* Docking port for bots or connector for bricks that should not be attached too firmly
 * Various handles to store minifigure gear or custom fitted cargo containers
 * Rotatable handle on the left side
 * Can stand upright on its rear engine
@@ -37,8 +37,8 @@ It is still ones of my favorites due to the interesting asymmetry, small form fa
 * Time needed to digitalize the model using [BrickLink Studio](https://studio.bricklink.com/v2/build/studio.page): ~80 minutes (first time doing this, now I am more comfortable finding parts 😃)
 * Dimensions: 12x12x5cm with extended wing, ~58g, 74 parts, 58 distinct parts
 
-![My Mosquito with pilot, droid and cargo](real_on_the_ground.jpg)
-![My Mosquito with folded wing, droid and no cargo](real_compact.jpg)
+![My Mosquito with pilot, bot and cargo](real_on_the_ground.jpg)
+![My Mosquito with folded wing, bot and no cargo](real_compact.jpg)
 
 ## 2020 Edition
 

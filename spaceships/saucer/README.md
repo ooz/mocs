@@ -24,7 +24,7 @@ Light weaponry emphasizes every Saucer pilot's claim to skip traffic.
 * Spacious cockpit and cargo bay
 * Two cannons and a pellet launcher
 * Rear and bottom docking ports
-* Small docking port for a droid
+* Small docking port for a bot
 * Minifigure gear and pole attachment points behind the cockpit
 
 ## Meta

@@ -19,7 +19,7 @@ A light reconnaissance fighter.
 
 * Foldable wings and adjustable rear
 * Detachable engine part
-* Light arms on the right side, droid docking port on the left side
+* Light arms on the right side, bot docking port on the left side
 
 ## Meta
 

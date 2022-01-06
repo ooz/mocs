@@ -22,7 +22,7 @@ The Good Industries "Commuter" carries the average office worker to the job and 
 
 * Spacious cockpit
 * Equipment storage clips
-* Droid docking port
+* Bot docking port
 * Connection and dock ports for various container types
 * Rear connection allows for different engines to be attached
 * Light laser gun

@@ -21,7 +21,7 @@ The project was 30 megaticks late and totally out of other budgets. Still, as cl
 * The pod has 2 blasters and various connection sockets
 * Detachable/attachable wings and engine, allowing various configurations
 * Heavy assault wing with 4 blasters, 1 torpedo launcher, 1 turret cannon, additional gear storage options and a extendable pole to support the model standing
-* Tool wing with 1 blaster, 1 pellet launcher, droid or light container socket, more gear storage options and a mechanical arm
+* Tool wing with 1 blaster, 1 pellet launcher, bot or light container socket, more gear storage options and a mechanical arm
 * Engine can
 * Rear engine can be replaced with the engines of the [Wedge](../the-wedge/) and the [Needle](../the-needle/). Also supports the cargo pod of the [Needle](../the-needle/) (see photos below)
 

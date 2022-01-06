@@ -17,7 +17,7 @@ The Needle is what you assemble and fly when you do not have the funding for a [
 ## Features
 
 * Small cockpit pod with minimal pilot space
-* One cannon, a droid/light container docking port and one slot for minifigure gear
+* One cannon, a bot/light container docking port and one slot for minifigure gear
 * The engine provides more minifigure gear storage options. Alternatively the cannon can also be mounted on the engine
 * Cargo pod with turret and further connection points
 * Compatible with the engines of the [Wedge](../the-wedge) and [UniPod](../universal-pod/)

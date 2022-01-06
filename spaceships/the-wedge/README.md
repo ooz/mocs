@@ -22,7 +22,7 @@ The Wedge (formerly known as the "Arrowhead") is heavy armed and armored assault
 * Four blasters (one of which is a pellet launcher)
 * Rotatable turret cannon
 * Various outside clips to store minifigure gear
-* Droid docking port or light container connector
+* Bot docking port or light container connector
 * Can stand upright on its rear engine
 * Rear engine can be replaced with the engines of [The Needle](../the-needle/) and the [Good Industries Universal Pod](../universal-pod/). Also supports the cargo pod of [The Needle](../the-needle/) (see photos below)
 

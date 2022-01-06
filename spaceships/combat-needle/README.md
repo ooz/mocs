@@ -19,7 +19,7 @@ description: Armed and armored vessel from scrap metal
 ## Features
 
 * Spacious cockpit for pilot comfort
-* Droid/light cargo docking port
+* Bot/light cargo docking port
 * Rear engine can be detached and replaced with various other engines
 * One pin connector per side for extension
 * Two laser cannons, one missile launcher and further attachment points in the front (minifigure gear or instruments)
