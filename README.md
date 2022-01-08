@@ -58,14 +58,13 @@ TODO list of designs I still want to digitalize:
 *Fictive abstraction over realism*
 
 * Playable, functional, robust and can be moved conveniently
-* Minifigure scale is preferred
 * All designs are open for modification
 * Greeble is an afterthought and does not compromise the above in favor of more visual appeal or detail
 * Models for children, lore for adults
 
 Design approach:
 
-* Focus on core idea or moving, functional parts first (e.g. cockpit, hatches, engine)!
+* Focus on core idea or moving, functional parts first (e.g. cockpit, hatches, engine, trapdoors)!
 * Flesh out raw form!
 * Improve sturdiness!
 * Iterate!
