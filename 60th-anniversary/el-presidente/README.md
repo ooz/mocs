@@ -7,4 +7,4 @@ For 5€ I could not resist and bought the whole package: desk, telephone, fake 
 
 ![El Presidente](el-pres.jpeg)
 
-(originally posted on my Twitter, moved here on 2022-01-16)
+(originally posted on my Twitter on 2018-01-08, moved here on 2022-01-16)
