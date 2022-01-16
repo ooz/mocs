@@ -4,7 +4,7 @@
 Author: Oliver Z., https://oliz.io
 Description: Minimal static site generator easy to use with GitHub Pages o.s.
 Website: https://oliz.io/ggpy/
-Version: 2.0.1+dev
+Version: 3.0.1
 License: Dual-licensed under GNU AGPLv3 or MIT License,
          see LICENSE.txt file for details.
 
@@ -27,6 +27,7 @@ import os
 import sys
 import time
 import markdown
+from typing import List, Optional, Tuple # Needed for mypy, will be obsolete with Python 3.9+
 from xml.sax.saxutils import escape as xmlescape
 
 ##############################################################################
@@ -51,7 +52,7 @@ SPECIAL_TAGS = [
 ##############################################################################
 # MARKDOWN CONVERSION
 ##############################################################################
-def configure_markdown():
+def configure_markdown() -> markdown.Markdown:
     return markdown.Markdown(
         extensions = [
             'extra',
@@ -67,7 +68,7 @@ def configure_markdown():
         ]
     )
 
-def markdown2post(content='', config=None):
+def markdown2post(content:str='', config:Optional[dict]=None) -> dict:
     config = config or {}
     MD = configure_markdown()
     html_section = MD.reset().convert(content)
@@ -90,8 +91,8 @@ def markdown2post(content='', config=None):
     }
     return post
 
-def convert_meta(md, field, default='', raw=False):
-    field_value = md.Meta.get(field, '')
+def convert_meta(md:markdown.Markdown, field:str, default:str='', raw:bool=False) -> str:
+    field_value = md.Meta.get(field, '') # type: ignore # Meta plugin dynamically adds this property
     if len(field_value):
         if raw:
             return ''.join(field_value)
@@ -101,13 +102,13 @@ def convert_meta(md, field, default='', raw=False):
 ##############################################################################
 # CONTENT FORMATTERS AND SNIPPETS
 ##############################################################################
-def logo_url(config=None):
+def logo_url(config:Optional[dict]=None) -> str:
     config = config or {}
-    base_url = config.get('site', {}).get('base_url', '')
-    logo_url = base_url + '/' + config.get('site', {}).get('logo', '')
+    base_url = str(config.get('site', {}).get('base_url', ''))
+    logo_url = base_url + '/' + str(config.get('site', {}).get('logo', ''))
     return logo_url if logo_url != '/' else ''
 
-def header(logo_url, title_html, date='', config=None):
+def header(logo_url:str, title_html:str, date:str='', config:Optional[dict]=None) -> str:
     config = config or {}
     author_url = config.get('author', {}).get('url', '')
     lines = []
@@ -116,16 +117,16 @@ def header(logo_url, title_html, date='', config=None):
     lines.append(post_header(title_html, date, config))
     return '\n'.join([line for line in lines if len(line)])
 
-def pagetitle(title='', config=None):
+def pagetitle(title:str='', config:Optional[dict]=None) -> str:
     config = config or {}
-    root_title = config.get('site', {}).get('title', '')
+    root_title = str(config.get('site', {}).get('title', ''))
     if len(title):
         if len(root_title) and title != root_title:
             return f'{title} | {root_title}'
         return title
     return root_title
 
-def post_header(title_html, date='', config=None):
+def post_header(title_html:str, date:str='', config:Optional[dict]=None) -> str:
     config = config or {}
     name = config.get('author', {}).get('name', '')
     author_url = config.get('author', {}).get('url', '')
@@ -145,14 +146,14 @@ def post_header(title_html, date='', config=None):
 </div>'''
     return header
 
-def footer_navigation():
+def footer_navigation() -> str:
     return '\n'.join([
         '''<a href="#" class="nav">top</a>''',
         '''<a href="javascript:toggleTheme()" class="nav">🌓</a>''',
         '''<a href="javascript:toggleFontSize()" class="nav">aA</a>'''
     ])
 
-def about_and_social_icons(config=None):
+def about_and_social_icons(config:Optional[dict]=None) -> str:
     config = config or {}
     social_config = config.get('social', {})
 
@@ -163,13 +164,13 @@ def about_and_social_icons(config=None):
 
     return '\n'.join(reversed(social))
 
-def _social_link(label, link):
+def _social_link(label:str, link:str) -> str:
     return f'<a href="{link}" class="social">{label}</a>' if len(link) else ''
 
-def posts_index(posts):
+def posts_index(posts:List[dict]) -> str:
     posts = [post for post in posts if TAG_DRAFT not in post['tags'] and TAG_INDEX not in post['tags']]
     posts_html = []
-    for post in reversed(sorted(posts, key=lambda post: post['date'])):
+    for post in reversed(sorted(posts, key=lambda post: post['date'])): # type: ignore # mypy struggles to infer type for lambda here
         day = post['date'][:10]
         title = post['title']
         url = post['url']
@@ -198,11 +199,11 @@ def posts_index(posts):
                 posts_html.append(f'''</div>''')
             else:
                 posts_html.append(f'''<div class="card"><small class="social">{day}</small><a href="{url}"><b>{title}</b></a></div>''')
-    posts_html = '\n'.join(posts_html)
-    return html_tag_block('div', posts_html)
+    posts_html_str = '\n'.join(posts_html)
+    return html_tag_block('div', posts_html_str)
 
 ## META, SOCIAL AND MACHINE-READABLES
-def meta(author, description, tags):
+def meta(author:str, description:str, tags:str) -> str:
     meta_names = []
     keywords = _sanitize_special_tags(tags)
     if len(author):
@@ -213,7 +214,7 @@ def meta(author, description, tags):
         meta_names.append(('keywords', keywords))
     return '\n'.join([_meta_tag('name', name[0], name[1]) for name in meta_names])
 
-def _sanitize_special_tags(tags):
+def _sanitize_special_tags(tags:str) -> str:
     '''Refactor to use regex
     '''
     sanitized = tags
@@ -228,7 +229,7 @@ def _sanitize_special_tags(tags):
             sanitized = ''
     return sanitized
 
-def opengraph(title, url, description, date, config=None):
+def opengraph(title:str, url:str, description:str, date:str, config:Optional[dict]=None) -> str:
     '''url parameter should end with "/" to denote a directory!
     '''
     config = config or {}
@@ -247,10 +248,10 @@ def opengraph(title, url, description, date, config=None):
         meta_properties.append(('article:published_time', date))
     return '\n'.join([_meta_tag('property', prop[0], prop[1]) for prop in meta_properties])
 
-def _meta_tag(type, type_value, content):
+def _meta_tag(type:str, type_value:str, content:str) -> str:
     return html_tag_empty('meta', [(type, type_value), ('content', content)])
 
-def json_ld(title, url, description, config=None):
+def json_ld(title:str, url:str, description:str, config:Optional[dict]=None) -> str:
     config = config or {}
     root_title = config.get('site', {}).get('title', '')
     json_escaped_root_title = root_title.replace('"', '\\"')
@@ -264,11 +265,11 @@ f'''<script type="application/ld+json">
 ##############################################################################
 # HTML SNIPPETS
 ##############################################################################
-def additional_head_tags(config=None):
+def additional_head_tags(config:Optional[dict]=None) -> str:
     config = config or {}
     return '\n'.join(config.get('site', {}).get('head', [])).strip()
 
-def html_opening_boilerplate():
+def html_opening_boilerplate() -> str:
     return \
 '''<!DOCTYPE html>
 <html lang="en-US">
@@ -277,29 +278,29 @@ def html_opening_boilerplate():
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">'''
 
-def html_head_body_boilerplate():
+def html_head_body_boilerplate() -> str:
     return \
 '''</head>
 
 <body onload="initTheme()">'''
 
-def html_tag_line(tag, content):
+def html_tag_line(tag:str, content:str) -> str:
     return \
 f'''<{tag}>{content}</{tag}>'''
 
-def html_tag_block(tag, content):
+def html_tag_block(tag:str, content:str) -> str:
     return \
 f'''<{tag}>
 {content}
 </{tag}>'''
 
-def html_tag_empty(tag, attributes):
+def html_tag_empty(tag:str, attributes:List[Tuple[str, str]]) -> str:
     html_attributes = ' '.join([f'{attr[0]}="{attr[1]}"' for attr in attributes])
     if len(html_attributes):
         return f'<{tag} {html_attributes}>'
     return ''
 
-def html_closing_boilerplate():
+def html_closing_boilerplate() -> str:
     return \
 '''</body>
 </html>
@@ -307,7 +308,7 @@ def html_closing_boilerplate():
 
 ## INLINE CSS AND JAVASCRIPT
 ## From: https://raw.githubusercontent.com/ooz/templates/master/html/oz.css
-def inline_style():
+def inline_style() -> str:
     return '''body {
     font-family: sans-serif;
     line-height: 1.5;
@@ -374,7 +375,7 @@ td, th {
 .card { background: rgba(0, 0, 0, 0.1); box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.2); border-radius: 5px; padding: .8rem; margin-top: .8rem; }
 .social { float: right; margin-left: 1rem; }'''
 # From: https://raw.githubusercontent.com/ooz/templates/master/html/oz-accessibility.js
-def inline_javascript():
+def inline_javascript() -> str:
     return '''function toggleTheme() { document.body.classList.toggle("dark-mode") }
 function initTheme() { let h=new Date().getHours(); if (h <= 8 || h >= 20) { toggleTheme() } }
 function toggleFontSize() { document.body.classList.toggle("large-font") }'''
@@ -386,7 +387,7 @@ function toggleFontSize() { document.body.classList.toggle("large-font") }'''
 # * Rendering markdown file as HTML
 # * Rendering sitemap
 ##############################################################################
-def template_newpost(title='Title', description='-'):
+def template_newpost(title:str='Title', description:str='-') -> str:
     return \
 f'''---
 title: {title}
@@ -396,7 +397,7 @@ tags: {TAG_DRAFT}
 ---
 '''
 
-def template_page(post, config=None):
+def template_page(post:dict, config:Optional[dict]=None) -> str:
     config = config or {}
     canonical_url = post.get('url', '')
     title = post.get('title', '')
@@ -410,11 +411,11 @@ def template_page(post, config=None):
     header_content = header(logo, post.get('html_headline', ''), date, config) if TAG_NO_HEADER not in tags else ''
     footer_content = ''
     if TAG_NO_FOOTER not in tags:
-        footer_content = [
+        footer_contents = [
             footer_navigation(),
             about_and_social_icons(config)
         ]
-        footer_content = '\n'.join([content for content in footer_content if len(content)])
+        footer_content = '\n'.join([content for content in footer_contents if len(content)])
     blocks = [_template_common_start(title, canonical_url, config)]
     if (not post.get('is_index', False)) and TAG_NO_META not in tags:
         blocks.extend([
@@ -425,7 +426,7 @@ def template_page(post, config=None):
     blocks.append(_template_common_body_and_end(header_content, post.get('html_section', ''), footer_content))
     return '\n'.join(blocks)
 
-def _template_common_start(title, canonical_url, config):
+def _template_common_start(title:str, canonical_url:str, config:dict) -> str:
     logo = logo_url(config)
     return '\n'.join([
         html_opening_boilerplate(),
@@ -437,7 +438,7 @@ def _template_common_start(title, canonical_url, config):
         html_tag_block('script', inline_javascript()),
     ])
 
-def _template_common_body_and_end(header, section, footer):
+def _template_common_body_and_end(header:str, section:str, footer:str) -> str:
     blocks = [
         html_head_body_boilerplate(),
         html_tag_block('header', header) if len(header) else '',
@@ -447,7 +448,7 @@ def _template_common_body_and_end(header, section, footer):
     ]
     return '\n'.join([block for block in blocks if len(block)])
 
-def template_sitemap(posts, config=None):
+def template_sitemap(posts:List[dict], config:Optional[dict]=None) -> str:
     config = config or {}
     posts = [post for post in posts if TAG_DRAFT not in post.get('tags', []) and TAG_INDEX not in post.get('tags', [])]
     sitemap_xml = []
@@ -456,19 +457,20 @@ def template_sitemap(posts, config=None):
     additional_entries = config.get('site', {}).get('additional_sitemap_entries', [])
     all_entries = [(post['url'], post['last_modified']) for post in posts]
     all_entries = all_entries + [(entry, '') for entry in additional_entries]
-    all_entries = sorted(all_entries, key=lambda entry: entry[0])
-    for entry in all_entries:
+    all_entries = sorted(all_entries, key=lambda entry: entry[0]) # type: ignore # mypy fails to infer lambda type
+    for entry in all_entries[:50000]:
         sitemap_xml.append('  <url>')
         sitemap_xml.append('    <loc>%s</loc>' % escape(entry[0]))
         if len(entry[1]):
-            sitemap_xml.append('    <lastmod>%s</lastmod>' % entry[1])
+            sitemap_xml.append('    <lastmod>%s</lastmod>' % entry[1][:10])
         sitemap_xml.append('  </url>')
     sitemap_xml.append('</urlset>\n')
     return '\n'.join(sitemap_xml)
 
-def template_rss(posts, config=None):
+def template_rss(posts:List[dict], config:Optional[dict]=None) -> str:
     config = config or {}
     posts = [post for post in posts if TAG_DRAFT not in post.get('tags', []) and TAG_INDEX not in post.get('tags', [])]
+    posts = sorted(posts, key=lambda post: post['last_modified']) # type: ignore # mypy fails to infer lambda type
     base_url = xmlescape(config.get('site', {}).get('base_url', ''))
     title = xmlescape(config.get('site', {}).get('title', ''))
     title = base_url if (title == '' and base_url != '') else title
@@ -482,7 +484,7 @@ def template_rss(posts, config=None):
     rss_xml.append(f'''    <generator>Good Generator.py -- ggpy -- https://oliz.io/ggpy</generator>''')
     rss_xml.append(f'''    <lastBuildDate>{utils.formatdate()}</lastBuildDate>''')
     rss_xml.append(f'''    <atom:link href="{'rss.xml' if base_url == '' else f'{base_url}/rss.xml'}" rel="self" type="application/rss+xml" />''')
-    for post in posts:
+    for post in posts[-10:]: # Limit to the lastest 10 posts
         escaped_url = xmlescape(post.get('url', ''))
         escaped_title = xmlescape(post.get('title', ''))
         escaped_title = escaped_url if (escaped_title == '' and escaped_url != '') else escaped_title
@@ -509,10 +511,10 @@ def template_rss(posts, config=None):
 # PURE LIBRARY FUNCTIONS, UTILITIES AND HELPERS
 ##############################################################################
 _KEBAB_ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyz-'
-def kebab_case(word):
+def kebab_case(word:str) -> str:
     return ''.join(c for c in word.lower().replace(' ', '-') if c in _KEBAB_ALPHABET)
 
-def convert_path(filepath):
+def convert_path(filepath:str) -> str:
     targetpath = filepath[:-3]
     if targetpath.endswith('README'):
         targetpath = targetpath[:-6] + 'index'
@@ -522,15 +524,15 @@ def convert_path(filepath):
 ##############################################################################
 # SIDE-EFFECTS, interacting with filesystem
 ##############################################################################
-def read_file(path):
+def read_file(path:str) -> str:
     with open(path, 'r') as f:
         return f.read()
 
-def write_file(path, content=''):
+def write_file(path:str, content:str='') -> None:
     with open(path, 'w') as f:
         f.write(content)
 
-def scan_posts(directories, config=None):
+def scan_posts(directories:List[str], config:Optional[dict]=None) -> List[dict]:
     config = config or {}
     posts = []
     for directory in directories:
@@ -540,7 +542,7 @@ def scan_posts(directories, config=None):
             posts.append(post)
     return posts
 
-def generate(directories, config=None):
+def generate(directories:List[str], config:Optional[dict]=None) -> None:
     config = config or {}
     posts = scan_posts(directories, config)
     indices = [post for post in posts if TAG_INDEX in post['tags']]
@@ -562,7 +564,7 @@ def generate(directories, config=None):
     for post in posts:
         write_file(post['filepath'], post['html'])
 
-def convert_canonical(directory, targetpath, config=None):
+def convert_canonical(directory:str, targetpath:str, config:Optional[dict]=None) -> str:
     config = config or {}
     base_url = config.get('site', {}).get('base_url', '')
     targetpath = os.path.relpath(targetpath, directory)
@@ -575,14 +577,14 @@ def convert_canonical(directory, targetpath, config=None):
             return f'{targetpath[:-10]}'
     return targetpath
 
-def read_post(directory, filepath, config=None):
+def read_post(directory:str, filepath:str, config:Optional[dict]=None) -> dict:
     markdown_content = read_file(filepath)
     post = markdown2post(markdown_content, config)
     targetpath = convert_path(filepath)
     canonical_url = convert_canonical(directory, targetpath, config)
     post['filepath'] = targetpath
     post['url'] = canonical_url
-    post['last_modified'] = last_modified(filepath)
+    post['last_modified'] = last_modified(filepath, post['date'])
     post['is_index'] = TAG_INDEX in post['tags']
     post['html'] = template_page(post, config)
     return post
@@ -594,13 +596,13 @@ try:
 except ImportError: # pragma: no cover because git package is normally present, last_modified tested without
     print('No gitpython package found, degrading functionality (no last_modified support)!', file=sys.stderr)
 
-def last_modified(filepath):
+def last_modified(filepath:str, default:str='') -> str:
     if REPO:
         for commit in REPO.iter_commits(paths=filepath, max_count=1):
-            return time.strftime('%Y-%m-%d', time.gmtime(commit.authored_date))
-    return ''
+            return time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime(commit.authored_date))
+    return default
 
-def now_utc_formatted():
+def now_utc_formatted() -> str:
     now = time.localtime()
     return time.strftime('%Y-%m-%dT%H:%M:%SZ', now)
 
@@ -626,6 +628,6 @@ if __name__ == '__main__': # pragma: no cover because main wrapper
 
     if args.get('newpost', None):
         title = args.get('newpost')
-        write_file(kebab_case(title) + '.md', template_newpost(title))
-    if len(args.get('directories')):
-        generate(args.get('directories'), config)
+        write_file(kebab_case(title) + '.md', template_newpost(title)) # type: ignore # mypy isn't detecting ArgumentParser types
+    if len(args.get('directories')): # type: ignore # mypy isn't detecting ArgumentParser types
+        generate(args.get('directories'), config) # type: ignore # mypy isn't detecting ArgumentParser types

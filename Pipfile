@@ -9,6 +9,7 @@ python_version = "3"
 [dev-packages]
 pytest = "*"
 coverage = "*"
+mypy = "*"
 
 [packages]
 markdown = "*"
