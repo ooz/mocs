@@ -27,6 +27,8 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
 
+* [El Presidente](60th-anniversary/el-presidente/)
+
 ## Alternative Builds and Modifications
 
 * [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
