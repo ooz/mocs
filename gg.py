@@ -4,7 +4,7 @@
 Author: Oliver Z., https://oliz.io
 Description: Minimal static site generator easy to use with GitHub Pages o.s.
 Website: https://oliz.io/ggpy/
-Version: 3.0.1
+Version: 3.0.1.dev
 License: Dual-licensed under GNU AGPLv3 or MIT License,
          see LICENSE.txt file for details.
 
@@ -259,8 +259,7 @@ def json_ld(title:str, url:str, description:str, config:Optional[dict]=None) -> 
     json_escaped_description = description.replace('"', '\\"')
     name_block = f',"name":"{json_escaped_root_title}"' if len(root_title) else ''
     return \
-f'''<script type="application/ld+json">
-{{"@context":"http://schema.org","@type":"WebSite","headline":"{json_escaped_title}","url":"{url}"{name_block},"description":"{json_escaped_description}"}}</script>'''
+f'''<script type="application/ld+json">{{"@context":"http://schema.org","@type":"WebSite","headline":"{json_escaped_title}","url":"{url}"{name_block},"description":"{json_escaped_description}"}}</script>'''
 
 ##############################################################################
 # HTML SNIPPETS
@@ -370,11 +369,11 @@ td, th {
 .dark-mode pre { border-left: .3rem solid #0A7; }
 .large-font { font-size: 1.2em; }
 
-.avatar { border-radius: 50%; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); max-width: 3rem; }
+.avatar { border-radius: 50%; max-width: 5rem; }
 .nav { float: left; margin-right: 1rem; }
-.card { background: rgba(0, 0, 0, 0.1); box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.2); border-radius: 5px; padding: .8rem; margin-top: .8rem; }
+.card { background: rgba(0, 0, 0, 0.1); border-radius: 5px; padding: .8rem; margin-top: .8rem; }
 .social { float: right; margin-left: 1rem; }'''
-# From: https://raw.githubusercontent.com/ooz/templates/master/html/oz-accessibility.js
+## From: https://raw.githubusercontent.com/ooz/templates/master/html/oz-accessibility.js
 def inline_javascript() -> str:
     return '''function toggleTheme() { document.body.classList.toggle("dark-mode") }
 function initTheme() { let h=new Date().getHours(); if (h <= 8 || h >= 20) { toggleTheme() } }
