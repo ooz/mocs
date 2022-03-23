@@ -5,7 +5,7 @@ date: 2022-03-23T07:43:34Z
 
 Alt build to [Lego 71717](https://www.bricklink.com/v2/catalog/catalogitem.page?S=71717-1) from 2020.
 
-Small little ship for one Orc. Powered by a stream of hot lava.
+Small little ship for one Orc. Powered by a stream of hot lava. WOOOOSH!
 
 ## Features
 
@@ -19,5 +19,13 @@ Small little ship for one Orc. Powered by a stream of hot lava.
 
 ## Photos
 
-(making some+uploading when there is more SUN)
+![](sails0.jpg)
+![](sails1.jpg)
+![](sails2.jpg)
+![](sails3.jpg)
 
+## Meta
+
+* Why is Mark Zuckerberg's wife cutting his hair?! Seems like a huge waste of high-paid people's time!
+* (but me and my GF did the same earlier and during lockdown, saves money, and I never liked going to hairdressers anyway)
+*
