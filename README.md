@@ -33,6 +33,7 @@ My own Lego creations ("MOCs") with instructions and background information.
 
 * [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
 * [Minecart Deluxe](alts-mods/minecart-deluxe/)
+* [Lava Sails](alts-mods/lava-sails/)
 
 ## Legacy
 
@@ -49,7 +50,6 @@ Models built only from old bricks:
 TODO list of designs I still want to digitalize:
 
 * Space Van
-* Lava Sails (alt build)
 * Satellite maintenance mission (mod build, just photos)
 * Triple Enforcer BT
 * The Shiv
