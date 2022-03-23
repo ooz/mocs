@@ -47,8 +47,6 @@ Models built only from old bricks:
 
 ## Backlog
 
-TODO list of designs I still want to digitalize:
-
 * Space Van
 * Satellite maintenance mission (mod build, just photos)
 * Triple Enforcer BT
