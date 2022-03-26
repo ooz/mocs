@@ -26,6 +26,7 @@ Small little ship for one Orc. Powered by a stream of hot lava. WOOOOSH!
 
 ## Meta
 
-* Why is Mark Zuckerberg's wife cutting his hair?! Seems like a huge waste of high-paid people's time!
-* (but me and my GF did the same earlier and during lockdown, saves money, and I never liked going to hairdressers anyway)
+* Why is Mark Zuckerberg's wife cutting his hair? Seems like a huge waste of high-paid people's time!
+* (Well, my GF and I did the same earlier and during lockdown, saves money, and we never liked going to hairdressers anyway)
 *
+
