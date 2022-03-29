@@ -33,7 +33,8 @@ My own Lego creations ("MOCs") with background information and instructions.
 * [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
 * [Minecart Deluxe](alts-mods/minecart-deluxe/)
 * [Lava Sails](alts-mods/lava-sails/)
-* [Dragon Rider](alts-mods/dragon-rider/)
+
+[![Dragon Rider](thumbnails/dragon_rider.png)](alts-mods/dragon-rider/)
 
 ## Legacy
 
