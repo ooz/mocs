@@ -1,6 +1,6 @@
 # Lego Designs
 
-My own Lego creations ("MOCs") with instructions and background information.
+My own Lego creations ("MOCs") with background information and instructions.
 
 ## Spaceships
 
