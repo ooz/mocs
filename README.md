@@ -26,8 +26,7 @@ My own Lego creations ("MOCs") with instructions and background information.
 [![Crafty Miniboat](thumbnails/crafty_miniboat.png)](60th-anniversary/crafty-miniboat/)
 [![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
-
-* [El Presidente](60th-anniversary/el-presidente/)
+[![El Presidente](thumbnails/el_pres.png)](60th-anniversary/el-presidente/)
 
 ## Alternative Builds and Modifications
 
@@ -87,6 +86,8 @@ Resize thumbnails:
 ```
 mogrify -resize 256 *.png
 ```
+
+* Thumbnails are in 4:3 format, 256x192 px
 
 Rendering settings:
 
