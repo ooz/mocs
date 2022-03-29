@@ -4,7 +4,7 @@
 Author: Oliver Z., https://oliz.io
 Description: Minimal static site generator easy to use with GitHub Pages o.s.
 Website: https://oliz.io/ggpy/
-Version: 3.0.1.dev
+Version: 3.1.0
 License: Dual-licensed under GNU AGPLv3 or MIT License,
          see LICENSE.txt file for details.
 
@@ -108,13 +108,16 @@ def logo_url(config:Optional[dict]=None) -> str:
     logo_url = base_url + '/' + str(config.get('site', {}).get('logo', ''))
     return logo_url if logo_url != '/' else ''
 
-def header(logo_url:str, title_html:str, date:str='', config:Optional[dict]=None) -> str:
+def header(post:dict, date:str='', config:Optional[dict]=None) -> str:
     config = config or {}
+    logo = logo_url(config)
+    title_html = post.get('html_headline', '')
     author_url = config.get('author', {}).get('url', '')
     lines = []
-    if len(author_url) and len(logo_url):
-        lines.append(f'<a href="{author_url}"><img src="{logo_url}" class="avatar" /></a>')
+    if len(author_url) and len(logo):
+        lines.append(f'<a href="{author_url}"><img src="{logo}" class="avatar" /></a>')
     lines.append(post_header(title_html, date, config))
+    lines.append(post_tags(post))
     return '\n'.join([line for line in lines if len(line)])
 
 def pagetitle(title:str='', config:Optional[dict]=None) -> str:
@@ -145,6 +148,15 @@ def post_header(title_html:str, date:str='', config:Optional[dict]=None) -> str:
 {name_and_date}
 </div>'''
     return header
+
+def post_tags(post:dict) -> str:
+    tags = post.get('tags', [])
+    tags = _sanitize_special_tags(tags)
+    if len(tags):
+        return f'''<div style="text-align:right;">
+{html_tag_line('small', tags)}
+</div>'''
+    return ''
 
 def footer_navigation() -> str:
     return '\n'.join([
@@ -274,7 +286,6 @@ def html_opening_boilerplate() -> str:
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">'''
 
 def html_head_body_boilerplate() -> str:
@@ -405,9 +416,8 @@ def template_page(post:dict, config:Optional[dict]=None) -> str:
     description = post.get('description', '')
     raw_title = ''.join(post.get('raw_title', ''))
     raw_description = ''.join(post.get('raw_description', ''))
-    logo = logo_url(config)
     author_name = config.get('author', {}).get('name', '')
-    header_content = header(logo, post.get('html_headline', ''), date, config) if TAG_NO_HEADER not in tags else ''
+    header_content = header(post, date, config) if TAG_NO_HEADER not in tags else ''
     footer_content = ''
     if TAG_NO_FOOTER not in tags:
         footer_contents = [

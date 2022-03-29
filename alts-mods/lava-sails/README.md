@@ -1,6 +1,7 @@
 ---
 title: Lava Sails
 date: 2022-03-23T07:43:34Z
+tags: orc, lava, ship, comedy
 ---
 
 Alt build to [Lego 71717](https://www.bricklink.com/v2/catalog/catalogitem.page?S=71717-1) from 2020.
