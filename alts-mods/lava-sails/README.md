@@ -20,10 +20,11 @@ Small little ship for one Orc. Powered by a stream of hot lava. WOOOOSH!
 
 ## Photos
 
-![](sails0.jpg)
-![](sails1.jpg)
-![](sails2.jpg)
-![](sails3.jpg)
+![Lava Sails, indoor shot](lava_sails.jpg)
+![Lava Sails, outdoor shot 1](sails0.jpg)
+![Lava Sails, outdoor shot 2](sails1.jpg)
+![Lava Sails, outdoor shot 3](sails2.jpg)
+![Lava Sails, outdoor shot 4](sails3.jpg)
 
 ## Meta
 
