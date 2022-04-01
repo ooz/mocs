@@ -30,8 +30,7 @@ My own Lego creations ("MOCs") with background information and instructions.
 
 ## Alternative Builds and Modifications
 
-* [Minecraft Ivory Ship](alts-mods/minecraft-ivory-ship/)
-
+[![Minecraft Ivory Ship](thumbnails/ivory_ship.jpg)](alts-mods/minecraft-ivory-ship/)
 [![Minecart Deluxe](thumbnails/minecart_deluxe.jpg)](alts-mods/minecart-deluxe/)
 [![Lava Sails](thumbnails/lava_sails.jpg)](alts-mods/lava-sails/)
 [![Dragon Rider](thumbnails/dragon_rider.png)](alts-mods/dragon-rider/)
