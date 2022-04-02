@@ -16,9 +16,16 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
 [![Good Industries Personal Pod](thumbnails/personal_pod.png)](spaceships/personal-pod/)
 
+* Triple Enforcer BT
+* The Shiv
+
 ## Other Vehicles
 
 [![Hover Scooter](thumbnails/hover_scooter.png)](vehicles/hover-scooter/)
+
+## Structures
+
+* Biwak Pod
 
 ## 60th Anniversary Models
 
@@ -34,6 +41,9 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Minecart Deluxe](thumbnails/minecart_deluxe.jpg)](alts-mods/minecart-deluxe/)
 [![Lava Sails](thumbnails/lava_sails.jpg)](alts-mods/lava-sails/)
 [![Dragon Rider](thumbnails/dragon_rider.png)](alts-mods/dragon-rider/)
+[![Extended Satellite Service Mission](thumbnails/essm.jpg)](alts-mods/extended-ssm/)
+
+* Space Van
 
 ## Legacy
 
@@ -44,14 +54,6 @@ Models built only from old bricks:
 * [Space Capsule](legacy/space-capsule/)
 
 <!-- * [Junk Propeller Plane](legacy/junk-propeller/) -->
-
-## Backlog
-
-* Space Van
-* Satellite maintenance mission (mod build, just photos)
-* Triple Enforcer BT
-* The Shiv
-* Biwak Pod
 
 ## Philosophy
 
