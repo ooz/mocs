@@ -1,6 +1,6 @@
 ---
 title: Extended Satellite Service Mission
-date: 2022-04-01T16:44:31Z
+date: 2022-04-02T16:44:31Z
 ---
 
 Super-charged version of [60224 Satellite Service Mission](https://www.bricklink.com/catalogItemInv.asp?S=60224-1) from 2019.
@@ -16,9 +16,18 @@ Resulting in a less round, more square, more robust look:
 
 ## Photos
 
-
+![Extended Satellite Service Mission](essm0.jpg)
+![ESSM: Bottom view with dock](essm1.jpg)
+![ESSM: Cockpit view with dock from inside](essm2.jpg)
+![ESSM: Space van capsule docked on bottom](essm_bottom_dock.jpg)
+![ESSM: Space van docked on top/studs](essm_space_van_ontop.jpg)
+![ESSM and Space Van, all undocked and open](essm_and_space_van.jpg)
 
 ## Meta
+
+![ESSM: Top view](essm3.jpg)
+![SSM: Original model, top view](ext_img/LEGO_60224_alt5.jpg)
+(For comparision, official promo shot of the original model by Lego)
 
 * I only made the model 2 studs longer recently, works with and without
 * Same with the 2x1 white filler tiles (modified) on the cockpit sides, which can be varied to preference
