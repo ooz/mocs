@@ -12,10 +12,14 @@ Alt build mostly from parts of [60225](https://www.bricklink.com/catalogItemInv.
 * Multiple gear attachment points
 * Multiple docking ports
 * Lots of space in the docked rear part
+* Minor weaponry to blow up space debris (creating more space debris, yay!)
 
 ## Photos
 
 ![Space Van: main view](space_van.jpg)
+![Space Van: capsule bottom view](capsule_bottom.jpg)
+![Space Van capsule docked to Extended Satellite Service Mission](capsule_essm.jpg)
+![Entire Space Van docked on top of Extended Satellite Service Mission](space-van_essm.jpg)
 
 ## Meta
 
