@@ -42,8 +42,7 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Lava Sails](thumbnails/lava_sails.jpg)](alts-mods/lava-sails/)
 [![Dragon Rider](thumbnails/dragon_rider.png)](alts-mods/dragon-rider/)
 [![Extended Satellite Service Mission](thumbnails/essm.jpg)](alts-mods/extended-ssm/)
-
-* Space Van
+[![Space Van](thumbnails/space_van.jpg)](alts-mods/space-van/)
 
 ## Legacy
 
