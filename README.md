@@ -35,6 +35,8 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
 [![El Presidente](thumbnails/el_pres.png)](60th-anniversary/el-presidente/)
 
+* Orange Mech
+
 ## Alternative Builds and Modifications
 
 [![Minecraft Ivory Ship](thumbnails/ivory_ship.jpg)](alts-mods/minecraft-ivory-ship/)
