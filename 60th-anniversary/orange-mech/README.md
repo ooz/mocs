@@ -19,3 +19,4 @@ Mech with wings and wheels.
 ![Orange Mech: front view](orange-mech0.jpg)
 ![Orange Mech: rear view](orange-mech1.jpg)
 ![Orange Mech: top, side view](orange-mech2.jpg)
+![Orange Mech: pilot space, cockpit open](orange-mech3.jpg)
