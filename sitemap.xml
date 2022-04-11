@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://oliz.io/mocs/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-09</lastmod>
   </url>
   <url>
     <loc>https://oliz.io/mocs/60th-anniversary/</loc>
@@ -23,6 +23,10 @@
   <url>
     <loc>https://oliz.io/mocs/60th-anniversary/modular-rockets/</loc>
     <lastmod>2021-03-29</lastmod>
+  </url>
+  <url>
+    <loc>https://oliz.io/mocs/60th-anniversary/orange-mech/</loc>
+    <lastmod>2022-04-11</lastmod>
   </url>
   <url>
     <loc>https://oliz.io/mocs/60th-anniversary/pirate-ship/</loc>

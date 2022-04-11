@@ -34,8 +34,7 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Cloud Raider](thumbnails/cloud_raider.png)](60th-anniversary/cloud-raider/)
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
 [![El Presidente](thumbnails/el_pres.png)](60th-anniversary/el-presidente/)
-
-* Orange Mech
+[![Orange Mech](thumbnails/orange_mech.jpg)](60th-anniversary/orange-mech/)
 
 ## Alternative Builds and Modifications
 
