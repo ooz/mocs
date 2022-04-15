@@ -35,6 +35,7 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Pirate Ship](thumbnails/pirate_ship.png)](60th-anniversary/pirate-ship/)
 [![El Presidente](thumbnails/el_pres.png)](60th-anniversary/el-presidente/)
 [![Orange Mech](thumbnails/orange_mech.jpg)](60th-anniversary/orange-mech/)
+[![Cannon Boat](thumbnails/cannon_boat.jpg)](60th-anniversary/cannon-boat/)
 
 ## Alternative Builds and Modifications
 
