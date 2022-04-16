@@ -15,9 +15,9 @@ My own Lego creations ("MOCs") with background information and instructions.
 [![Good Industries Commuter](thumbnails/commuter.png)](spaceships/commuter/)
 [![Combat Needle](thumbnails/combat_needle.png)](spaceships/combat-needle/)
 [![Good Industries Personal Pod](thumbnails/personal_pod.png)](spaceships/personal-pod/)
+[![The Shiv](thumbnails/the_shiv.png)](spaceships/the-shiv/)
 
 * Triple Enforcer BT
-* The Shiv
 
 ## Other Vehicles
 
