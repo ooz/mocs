@@ -1,4 +1,4 @@
-# Lego Designs
+# Lego© Designs
 
 My own Lego creations ("MOCs") with background information and instructions.
 
@@ -100,3 +100,8 @@ Rendering settings:
 * Material effects:
     * "UV Degradation" on, Min. `0.15`, Max. `0.5`
     * other effects off
+
+## Legal
+
+LEGO® is a protected property of Lego Group. This website is in no way afilliated with, endorsed by or sponsored by Lego Group.
+
