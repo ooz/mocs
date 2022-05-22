@@ -41,3 +41,9 @@ Visual similarities with sarcophagi are just coincidences.
 ![Real Personal Pod: with cargo module attached, all hatches open](personal-pod_cargo_all_hatches_open.jpg)
 ![Real Personal Pod: alternative cargo module attachment](personal-pod_alternative-cargo.jpg)
 ![Cargo module open](cargo_open.jpg)
+
+I also tried building a bigger ship around the Personal Pod, but didn't follow through:
+
+![Personal Pod Dock: diagonal front view](pp_dock0.jpg)
+![Personal Pod Dock: left side view](pp_dock1.jpg)
+![Personal Pod Dock: top view](pp_dock2.jpg)
